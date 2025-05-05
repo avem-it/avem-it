@@ -1,103 +1,42 @@
-# Определяем события, которые запускают этот workflow
+name: Deploy to EuroDNS
+
 on:
   push:
     branches:
-      # Укажите здесь имя вашей основной ветки.
-      # Чаще всего это 'main' или 'master'.
-      # Если ваша основная ветка называется иначе, измените 'main' на ее имя.
       - main
-      # Если вы хотите деплоить при push в несколько веток, добавьте их сюда:
-      # - master
-      # - production # Пример другой ветки
 
-# Рабочие процессы (Jobs) - набор шагов, которые будут выполнены
 jobs:
   deploy:
-    # Указываем операционную систему, на которой будет выполняться job
-    runs-on: ubuntu-latest # Стандартный выбор для большинства задач
+    runs-on: ubuntu-latest
 
-    # Шаги (Steps) - последовательность действий внутри job
     steps:
-      # Шаг 1: Получение кода из репозитория GitHub
-      # Это стандартный шаг, необходимый для доступа к файлам вашего проекта
-      - name: Checkout code from GitHub
-        uses: actions/checkout@v4 # Используем стандартное действие GitHub для скачивания репозитория
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # --- ОПЦИОНАЛЬНЫЙ ШАГ: Сборка проекта (раскомментируйте, если нужно) ---
-      # Если ваш сайт не просто набор статических HTML/CSS/JS файлов,
-      # а требует сборки (например, с помощью Node.js, Webpack, Parcel,
-      # статического генератора типа Hugo/Jekyll/Next.js export и т.п.),
-      # раскомментируйте и настройте шаги сборки ниже.
-      # Если у вас чистая статика, оставьте эти строки закомментированными.
+      # --- если у вас есть сборка:
+      # - name: Install dependencies
+      #   run: npm ci
+      #
+      # - name: Build
+      #   run: npm run build
+      # -------------------------------------
 
-      #- name: Setup Node.js (Пример для проектов на Node.js)
-      #  uses: actions/setup-node@v4
-      #  with:
-      #    node-version: '20' # Укажите версию Node.js, необходимую для сборки
-
-      #- name: Install dependencies (Пример)
-      #  run: npm install --production # Или yarn install --production
-
-      #- name: Build project (Пример)
-      #  run: npm run build # Команда для запуска сборки вашего проекта
-
-      # ВАЖНО: Если вы используете шаг сборки, ваши готовые к деплою файлы,
-      # вероятно, окажутся в подпапке (например, 'dist', 'build', '_site', 'out').
-      # Вам нужно будет указать путь к этой папке в параметре 'local-dir'
-      # на следующем шаге FTP Deploy.
-
-      # --- КОНЕЦ ОПЦИОНАЛЬНОГО ШАГА СБОРКИ ---
-
-      # Шаг 2: Деплоймент файлов по FTP/SFTP на EuroDNS
-      # Используем популярное стороннее действие для деплоя по FTP/SFTP
-      - name: Deploy via FTP/SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.1 # Указываем, какое действие использовать и его версию
-        
+      - name: Deploy via FTPS-Implicit to EuroDNS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.1
         with:
-          # Параметры подключения, берем значения из секретов GitHub:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-
-          # Если ваш хостинг EuroDNS использует нестандартный порт,
-          # раскомментируйте строку ниже и убедитесь, что у вас есть секрет FTP_PORT
-          # port: ${{ secrets.FTP_PORT }}
-
-          # Протокол: ftp, ftps (FTP over SSL), sftp (SSH File Transfer Protocol).
-          # SFTP (обычно порт 22) наиболее безопасен, если ваш хостинг его поддерживает.
-          # Если вы не уверены, попробуйте сначала оставить закомментированным - действие
-          # может попытаться определить протокол по порту или использовать стандартный FTP (порт 21).
-          # Если используете SFTP, возможно потребуется указать protocol: sftp
-          protocol: ftps # Пример, если используете SFTP
-          dangerous-clean-slate: false
-          # Путь к файлам в вашем репозитории, которые нужно загрузить.
-          # '.' означает корень репозитория.
-          # Если у вас был шаг сборки, и готовые файлы лежат в подпапке (например, 'dist'),
-          # измените этот путь, например: local-dir: ./dist/
+          port: ${{ secrets.FTP_PORT }}         # обычно 990 для implicit FTPS
+          protocol: ftps # ftps-implicit
+          secure: true
+          passive: true
+          # если вы собираете в папку dist/, поставьте ./dist/
           local-dir: ./
-
-          # Целевая директория на сервере хостинга EuroDNS, куда нужно загрузить файлы.
-          # ЭТО КРАЙНЕ ВАЖНО! Убедитесь, что путь указан верно
-          # (например, public_html, public_html/ваш_сайт, /httpdocs и т.п.)
-          # Берем значение из секрета FTP_REMOTE_PATH
           server-dir: /httpdocs/
-
-          # Опции синхронизации (по желанию):
-          # delete-remote: true # Удалять файлы на сервере, которых нет локально. Используйте ОСТОРОЖНО!
-
+          dangerous-clean-slate: false
           exclude: |
-
-              *.git/
-              *.github/
-
-          #   # Если у вас был шаг сборки в папку 'dist', НЕ ИСКЛЮЧАЙТЕ 'dist/'!
-          #   # exclude: |
-          #   #   .git/
-          #   #   .github/
-          #   #   node_modules/
-          #   #   temp/ # Пример: исключаем временную папку
-         # ... выше могут быть другие параметры like server-dir, protocol и т.п.
-
-# ... ниже могут идти другие шаги или конец файла
-
-# Конец файла workflow
+            **/.git/**         # полностью исключаем Git-метаданные
+            **/.github/**      # CI-файлы
+            node_modules/
+            *.log
