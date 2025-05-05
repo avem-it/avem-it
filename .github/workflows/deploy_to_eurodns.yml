@@ -96,5 +96,11 @@ jobs:
           #   #   .github/
           #   #   node_modules/
           #   #   temp/ # Пример: исключаем временную папку
+          exclude: |
+          .git/
+          .github/
+          node_modules/
+          .DS_Store # Исключаем файлы .DS_Store
+          **/*.css~ # Исключаем файлы, заканчивающиеся на .css~
 
 # Конец файла workflow
