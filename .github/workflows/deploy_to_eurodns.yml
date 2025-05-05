@@ -82,7 +82,7 @@ jobs:
           # ЭТО КРАЙНЕ ВАЖНО! Убедитесь, что путь указан верно
           # (например, public_html, public_html/ваш_сайт, /httpdocs и т.п.)
           # Берем значение из секрета FTP_REMOTE_PATH
-          server-dir: ${{ secrets.FTP_REMOTE_PATH }}
+          server-dir: /httpdocs/
 
           # Опции синхронизации (по желанию):
           # delete-remote: true # Удалять файлы на сервере, которых нет локально. Используйте ОСТОРОЖНО!
