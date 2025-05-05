@@ -1,0 +1,1933 @@
+/* ============================== */
+/* --- Font Styles --- */
+/* ============================== */
+
+/* Font Families */
+.text__font-family-montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.text__font-family-source {
+    font-family: "Source Serif 4", serif;
+}
+
+.text__font-family-unbounded {
+    font-family: Unbounded;
+}
+
+/* Font Colors */
+.text__color-white {
+    color: white;
+}
+
+.text__color-black {
+    color: black;
+}
+
+.text__color-gray {
+    color: #222025;
+}
+
+.text__color-yellow {
+    color: #EBFD36;
+}
+
+.text__color-ligthgray {
+    color: #777275;
+}
+
+/* Text Styling */
+.text__decoration-uppercase {
+    text-transform: uppercase;
+}
+
+.text__decoration-underline {
+    text-decoration: underline;
+}
+
+.text__decoration-border-bottom {
+    border-bottom: 1px currentColor solid;
+}
+
+.text-effect {
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.text-effect:hover {
+    color: #EEFF90;
+    text-decoration-color: #EEFF90;
+    transition: 0.2s;
+}
+
+.text-effect:focus {
+    color: #B1C637;
+}
+
+.text-effect:active {
+    color: #B1C637;
+}
+
+.text-effect-yellow {
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.text-effect-yellow:hover {
+    color: white;
+    text-decoration-color: white;
+    transition: 0.2s;
+}
+
+.text-effect-yellow:focus {
+    color: lightgray;
+    text-decoration-color: lightgray;
+}
+
+.text-effect-yellow:active {
+    color: lightgray;
+    text-decoration-color: lightgray;
+}
+
+/* Font Sizes and Other Properties */
+.text__h1 {
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.text__h1-about {
+    text-align: left;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 65px;
+}
+
+.text__h3 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__h3-burger {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.text__h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+
+.text__h4-projects {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+
+.text__h5 {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.text__burger {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__burger-link {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.text__p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0;
+}
+
+.text__p-team {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.text__copyright {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__team-title {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 30px 0 15px;
+}
+
+.text__p-about {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__p-about-table {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.text__accordion-normal {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text__accordion-numbers {
+    width: 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 39px;
+    margin-right: 30px;
+}
+
+.text__accordion-list {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.text__about-subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.text__steps-title {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.text__steps-subtitle {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.text__effect-projects {
+    display: flex;
+    align-items: center;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.text__effect-projects:hover .svg__arrow-projects,
+.text__effect-projects:hover h3 {
+    color: black;
+    fill: black;
+    transition: 0.3s;
+}
+
+.text__form-title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.text__form-checkbox {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text__form-label {
+    color: #969599;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.text__form-label::placeholder {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #969599;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.text__form-mini {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.text__form-sent-title {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__form-sent-subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.text__form-contacts {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 432px;
+}
+
+.text__form-contacts-margin {
+    margin-bottom: 100px;
+}
+
+.text__form-contacts-title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.text__form-contacts-subtitle {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text__form-contacts-message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+}
+
+.text__effect-underline-projects {
+    display: flex;
+    justify-content: center;
+    stroke: white;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+
+.text__effect-underline-projects:hover {
+    stroke: #EEFF90;
+    transition: 0.2s;
+}
+
+.text__effect-underline-projects:active {
+    color: #B1C637;
+    transition: 0.2s;
+}
+
+.text__effect-underline-projects:focus {
+    color: #B1C637;
+    transition: 0.2s;
+}
+
+.text__effect-underline-projects:hover .svg__arrow-projects,
+.text__effect-underline-projects:hover h3 {
+    color: #EEFF90;
+    fill: #EEFF90;
+    transition: 0.2s;
+}
+
+.text__effect-underline-projects:focus .svg__arrow-projects,
+.text__effect-underline-projects:focus h3 {
+    color: #B1C637;
+    fill: #B1C637;
+}
+
+.text__effect-underline-projects:active .svg__arrow-projects,
+.text__effect-underline-projects:active h3 {
+    color: #B1C637;
+    fill: #B1C637;
+}
+
+/* ============================== */
+/* --- Media Queries (from size.css) --- */
+/* ============================== */
+
+@media (hover: none) and (pointer: coarse) {
+    .custom-checkbox-label:hover {
+        background-color: white;
+    }
+}
+
+/* Размер 1480px */
+@media (max-width: 1480px) {
+    .page {
+        max-width: 1480px;
+    }
+
+    .header {
+        margin: 75px auto 0;
+    }
+
+    .logo-iwa__container {
+        left: 20px;
+        top: 20px;
+        width: 84px;
+    }
+
+    .link-lang-container {
+        max-width: 1100px;
+        margin: 0 80px 40px 0;
+    }
+
+    .logo-container-big {
+        gap: 38px;
+        justify-content: center;
+    }
+
+    .logo-container-small {
+        margin: 0 auto -9px;
+    }
+
+    .logo-big {
+        max-height: 103px;
+    }
+
+    .logo-small {
+        width: 218px;
+        max-height: 22px;
+    }
+
+    .subtitle {
+        margin: 8vh auto 10vh;
+    }
+
+    .subtitle__max-width {
+        max-width: 960px;
+    }
+
+    .header__menu-container-index {
+        width: 468px;
+        height: 60px;
+    }
+
+    .header__menu-container-about {
+        width: 468px;
+        height: 60px;
+        margin: 0 auto 24px;
+    }
+
+    .header__menu-container-list {
+        gap: 24px;
+    }
+
+    .button__menu {
+        width: 180px;
+        height: 40px;
+    }
+
+    .header__menu-container-sticky {
+        width: 468px;
+        height: 60px;
+    }
+
+    .modal-content {
+        max-width: 1360px;
+        max-height: 880px;
+    }
+
+    .modal-content-container {
+        margin-top: 60px;
+    }
+
+    .modal-content-container-form {
+        padding-right: 75px;
+    }
+
+    .modal-content-container-contacts {
+        padding-left: 75px;
+        gap: 40px;
+    }
+
+    .modal-content-container-contacts-socials-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cd-section-container {
+        padding: 30px 10px 0 36px;
+    }
+
+    .sections__container {
+        max-width: 960px;
+    }
+
+    .sections__gap {
+        gap: 210px;
+        margin-bottom: 210px;
+    }
+
+
+    .sections__companies {
+        width: 960px;
+        margin-bottom: 210px;
+    }
+
+    .sections__companies img {
+        max-width: 180px;
+        max-height: 88px;
+    }
+
+    .img-ozon {
+        height: 50px;
+    }
+
+    .img-beregi {
+        height: 50px;
+    }
+
+    .background-black {
+        padding-top: 210px;
+    }
+
+    .section__container-team {
+        max-width: 960px;
+        gap: 60px;
+    }
+
+    .section__container-team-item {
+        width: 280px;
+        height: 300px;
+    }
+
+    .sections__steps {
+        max-width: 960px;
+    }
+
+    .sections__steps-container-item {
+        max-width: 280px;
+        gap: 40px;
+    }
+
+    .section__container-dev {
+        max-width: 960px;
+    }
+
+    .section__container-dev-gallery-test {
+        padding-top: 210px;
+    }
+
+    .blurred-background {
+        position: relative;
+        width: 960px;
+        height: 544px;
+        margin: 210px auto 250px;
+    }
+
+    .sections__contacts-up {
+        margin: 0 auto 166px;
+        max-width: 960px;
+    }
+
+    .sections__contacts {
+        max-width: 960px;
+        gap: 50px;
+    }
+
+    .sections__page-projects-container {
+        max-width: 960px;
+        margin: 86px auto 0;
+    }
+
+    .sections__projects-integralbrand-container-title {
+        gap: 81px;
+    }
+
+    .text__h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .text__h3 {
+        font-size: 12px;
+    }
+
+    .text__h1-about {
+        font-size: 47px;
+        line-height: 55px;
+    }
+
+    .text__about-subtitle {
+        font-size: 15px;
+        line-height: 35px;
+    }
+
+    .text__form-title {
+        font-size: 30px;
+        line-height: normal;
+    }
+
+    .text__form-checkbox {
+        font-size: 12px;
+    }
+
+    .text__form-contacts-subtitle {
+        font-size: 30px;
+    }
+
+    .text__p-about-table {
+        font-size: 25px;
+    }
+
+    .text__accordion-list {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .text__accordion-normal {
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .text__copyright {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .input__text {
+        font-size: 14px;
+    }
+
+    .p_style-form {
+        font-size: 11px;
+    }
+
+    .form__button-text {
+        font-size: 14px;
+    }
+
+    .modal-text-big {
+        font-size: 25px;
+        line-height: 23.982px;
+    }
+
+    .modal-text-small {
+        font-size: 14px;
+        line-height: 19.333px;
+    }
+
+    .text__team-title {
+        font-size: 32px;
+    }
+
+    .text__p-team {
+        font-size: 20px;
+    }
+}
+
+/* Размер 1024px */
+@media (max-width: 1024px) {
+    .page {
+        max-width: 1024px;
+    }
+
+    .header {
+        margin: 70px auto 0;
+    }
+
+    .logo-container-big {
+        max-width: 876px;
+        gap: 34px;
+    }
+
+    .logo-container-small {
+        margin: 0 auto -9px;
+    }
+
+    .logo-big {
+        max-height: 95px;
+    }
+
+    .subtitle {
+        margin-top: 40px;
+    }
+
+    .subtitle__max-width {
+        max-width: 876px;
+    }
+
+    .modal-content-exit-close {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal-content {
+        max-width: 980px;
+        max-height: 824px;
+    }
+
+    .modal-content-container {
+        margin-top: 30px;
+    }
+
+    .modal-content-container-form {
+        max-width: 470px;
+        padding-right: 40px;
+        gap: 25px;
+    }
+
+    .modal-content-container-form-item {
+        height: 38px;
+        margin-top: 20px;
+        gap: 6px;
+        /* Промежуток между меткой и полем ввода */
+        padding-bottom: 8px;
+        /* Добавьте внутренний отступ снизу для визуального разделения */
+    }
+
+    .button__consult {
+        height: 40px;
+        margin: 18px 0 20px;
+        padding: 12px 20px;
+    }
+
+    .custom-checkbox-label {
+        padding: 10px 24px;
+    }
+
+    .modal-content-container-form-agree-gap {
+        gap: 10px;
+    }
+
+    .checkbox-size {
+        margin-right: 10px;
+    }
+
+    .modal-content-form-item-confirm {
+        width: 400px;
+    }
+
+    .modal-content-container-contacts {
+        max-width: 340px;
+        padding-left: 40px;
+    }
+
+    .modal-content-container-contacts-socials-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .cd-section-container {
+        display: none;
+        padding: 24px 8px 0 34px;
+    }
+
+    .sections__container {
+        max-width: 876px;
+    }
+
+    .accordion-container {
+        margin: 0 auto;
+        gap: 54px;
+        /* Расстояние между столбцами */
+        max-width: 876px;
+        /* Ширина */
+    }
+
+
+    .return__button {
+        width: 100%;
+    }
+
+    .sections__companies {
+        max-width: 876px;
+        flex-wrap: wrap;
+        margin-bottom: 200px;
+    }
+
+    .background-black {
+        padding-top: 200px;
+    }
+
+    .section__container-team {
+        max-width: 876px;
+        gap: 40px;
+    }
+
+    .section__container-team-item {
+        width: 260px;
+        height: 280px;
+    }
+
+    .sections__steps {
+        max-width: 876px;
+    }
+
+    .sections__steps-container-item {
+        max-width: 248px;
+        gap: 80px;
+    }
+
+    .section__container-dev {
+        max-width: 876px;
+    }
+
+    .section__container-dev-gallery-test {
+        padding-top: 200px;
+    }
+
+    .blurred-background {
+        max-width: 876px;
+        height: 544px;
+        margin: 200px auto 230px;
+    }
+
+    .content-text {
+        gap: 10px;
+    }
+
+    .svg__arrow-projects {
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+
+    .sections__contacts-up {
+        max-width: 876px;
+    }
+
+    .sections__contacts {
+        max-width: 876px;
+        gap: 30px;
+    }
+
+    .sections__page-projects-container {
+        max-width: 876px;
+        margin: 46px auto 0;
+    }
+
+    .sections__project-integralbrand-contacts-container {
+        gap: 100px;
+    }
+
+    .text__form-title {
+        font-size: 28px;
+    }
+
+    .input__text {
+        font-size: 9px;
+    }
+
+    .text__form-mini {
+        font-size: 10px;
+        line-height: normal;
+    }
+
+    .text__form-contacts-subtitle {
+        font-size: 26px;
+    }
+
+    .p_style-form {
+        font-size: 8px;
+    }
+
+    .form__button-text {
+        font-size: 10px;
+    }
+
+    .modal-text-big {
+        font-size: 19px;
+        line-height: 18px;
+    }
+
+    .modal-text-small {
+        font-size: 10px;
+        line-height: 14.724px;
+    }
+
+    .text__steps-title {
+        font-size: 25px;
+    }
+
+    .text__steps-subtitle {
+        font-size: 16px;
+        line-height: 25px;
+    }
+}
+
+/* Размер высоты 945px */
+@media (max-height: 945px) {
+    .header__menu-container-sticky {
+        display: none;
+    }
+}
+
+/* Размер 899px */
+@media (max-width: 899px) {
+    .link-lang-container {
+        max-width: 600px;
+        margin: 0 80px 40px 0;
+    }
+
+    .logo-container-big {
+        flex-wrap: wrap;
+    }
+
+    .sections__contacts {
+        flex-direction: column;
+        max-width: 658px;
+        gap: 100px;
+    }
+}
+
+/* Размер 758px */
+@media (max-width: 758px) {
+    .page {
+        max-width: 758px;
+    }
+
+    .header {
+        margin: 70px auto 0;
+    }
+
+    .logo-container-big {
+        max-width: 540px;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+    }
+
+    .logo-big {
+        height: 106px;
+    }
+
+    .subtitle {
+        margin-top: 40px;
+    }
+
+    .subtitle__max-width {
+        max-width: 600px;
+    }
+
+    .modal {
+        padding-top: 0;
+    }
+
+    .modal-content-exit-circle {
+        top: 30px;
+        right: 20px;
+    }
+
+    .modal-content-exit-close {
+        width: 30px;
+        height: 30px;
+    }
+
+    .modal-content {
+        max-width: 710px;
+        max-height: 1100px;
+        padding: 8px 8px 38px;
+    }
+
+    .modal-content-container {
+        flex-direction: column;
+        margin: 50px auto 0;
+        align-items: center;
+    }
+
+    .modal-content-container-form {
+        max-width: 658px;
+        padding: 14px 0 50px;
+        gap: 20px;
+        border-right: none;
+        border-bottom: 1px #676767 solid;
+    }
+
+    .modal-content-container-form-item {
+        height: 42px;
+        margin-top: 18px;
+        padding-bottom: 6px;
+        /* Добавьте внутренний отступ снизу для визуального разделения */
+    }
+
+    .modal-content-container-form-section-custom-item {
+        max-width: 190px;
+        /* Минимальная ширина элемента */
+    }
+
+    .button__consult {
+        height: 44px;
+        margin: 18px 0 27px;
+        padding: 14px 20px;
+    }
+
+    .custom-checkbox-label {
+        padding: 10px 1px;
+        width: 190px;
+    }
+
+    .modal-content-form-item-confirm {
+        width: 100%;
+        max-width: 656px;
+    }
+
+    .modal-content-container-contacts {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 656px;
+        margin-top: 50px;
+        padding-left: 24px;
+        gap: 40px;
+    }
+
+    .sections__container {
+        max-width: 658px;
+        margin: 0 auto 20px;
+    }
+
+    .cd-section-container-about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cd-section-container {
+        display: none;
+    }
+
+    .accordion-container {
+        gap: 29px; /* Сохраняем промежуток, если нужен, но он будет между колонками, стоящими вертикально */
+        max-width: 658px; /* Или уберите, если хотите, чтобы контейнер был 100% ширины */
+        width: 100%; /* Добавим, чтобы контейнер занимал всю ширину */
+        flex-direction: column; /* <-- ГЛАВНОЕ ИЗМЕНЕНИЕ: заставляем колонки стать вертикально */
+        margin: 0 auto; /* Центрируем контейнер */
+    }
+ 	
+ 	.accordion-column {
+        width: 100%; /* <-- ГЛАВНОЕ ИЗМЕНЕНИЕ: каждая колонка занимает всю ширину */
+    }
+
+
+    .logo-small {
+        width: 160px;
+        max-height: 17px;
+    }
+
+
+    .sections__companies {
+        flex-wrap: wrap;
+        width: 500px;
+        margin: 0 auto 180px;
+        gap: 40px;
+    }
+
+    .background-black {
+        padding-top: 180px;
+    }
+
+    .section__container-team {
+        max-width: 658px;
+        gap: 20px;
+    }
+
+    .section__container-team-item {
+        width: 204px;
+        height: 220px;
+    }
+
+    .sections__steps {
+        display: none;
+    }
+
+    .sections__steps-mini {
+        display: block;
+    }
+
+    .sections__steps-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .sections__steps-container-item {
+        flex-direction: row;
+        max-width: 658px;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .sections__steps-container-item-title {
+        max-width: 256px;
+    }
+
+    .sections__steps-container-item img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section__container-dev {
+        max-width: 658px;
+    }
+
+    .section__container-dev-gallery-test {
+        padding-top: 180px;
+    }
+
+    .blurred-background {
+        width: 658px;
+        height: 544px;
+        margin: 180px auto 20px;
+    }
+
+    .content-text {
+        gap: 10px;
+    }
+
+    .svg__arrow-projects {
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+
+    .sections__page-projects {
+        gap: 14px;
+        /* Расстояние между строками */
+    }
+
+    .sections__page-projects-double {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .sections__page-projects-double img {
+        width: 100%;
+    }
+
+    .sections__contacts-up {
+        max-width: 658px;
+    }
+
+    .sections__contacts {
+        max-width: 658px;
+        gap: 100px;
+    }
+
+    .sections__projects-integralbrand-container {
+        padding: 80px 0;
+        gap: 100px;
+    }
+
+    .sections__projects-integralbrand-scheme {
+        padding: 80px 0;
+    }
+
+    .sections__projects-integralbrand-container-2 {
+        padding: 80px 0;
+        gap: 15px;
+    }
+
+    .sections__projects-integralbrand-example {
+        padding: 100px 6px;
+    }
+
+    .text__h4 {
+        font-size: 15px;
+        line-height: 35px;
+        margin-bottom: 22px;
+    }
+
+    .text__p-about-table {
+        font-size: calc(1rem + ((1vw - 4.28px) * 2.7273));
+    }
+
+
+    .text__team-title {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .text__p-team {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 494px) {
+    .sections__projects-integralbrand-container-title {
+        flex-direction: column;
+    }
+
+    .sections__projects-integralbrand-scheme {
+        display: none;
+    }
+
+    .sections__projects-integralbrand-container-2 {
+        display: none;
+    }
+
+    .sections__projects-integralbrand-container-about-list {
+        flex-wrap: wrap;
+    }
+
+    .text__h1-about {
+        font-size: 40px;
+        line-height: 42.5px;
+    }
+}
+
+@media (max-width: 468px) {
+    .page-index {
+        margin-top: -16px;
+    }
+
+    .accordion-container {
+        flex-direction: column; /* Должно быть */
+        gap: 0; /* Должно быть */
+        width: 100%; /* <-- ИЗМЕНЕНО: контейнер на всю ширину */
+        max-width: 382px; /* Ограничиваем максимальную ширину контейнера на этом разрешении */
+        margin: 0 auto; /* Центрируем контейнер */
+    }
+
+    .accordion-column {
+        width: 100%; /* <-- ГЛАВНОЕ ИЗМЕНЕНИЕ: каждая колонка занимает всю ширину */
+    }
+
+    .logo-iwa__container {
+        left: 20px;
+        top: 52px;
+        width: 40px;
+    }
+
+    .link-lang-container {
+        display: none;
+    }
+
+    .header__menu-container-index {
+        display: none;
+    }
+
+    .header__menu-container-about {
+        display: none;
+    }
+
+    .header__menu-container-sticky {
+        display: none;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    /* Бургер-меню */
+    .logo-container-small {
+        width: 380px;
+        margin: 0 auto;
+        justify-content: start;
+    }
+
+    .logo-container-black {
+        margin: 0;
+    }
+
+    :root {
+        --burger-color: white;
+        /* Цвет линий по умолчанию */
+    }
+
+    body.white-bg {
+        --burger-color: black;
+        /* Цвет линий для страницы с белым фоном */
+    }
+
+    .container-burger {
+        display: flex;
+        position: relative;
+        width: 100%;
+        margin: 0 auto 50px;
+        padding: 24px 24px 0 24px;
+        justify-content: space-between;
+    }
+
+    .nav-burger {
+        display: flex;
+    }
+
+    .burger-checkbox {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .burger {
+        position: relative;
+        z-index: 3;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        border: none;
+        background: transparent;
+        width: 30px;
+        height: 26px;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: '';
+        left: 0;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 1px;
+        background: var(--burger-color);
+    }
+
+    .burger:hover::before,
+    .burger:hover::after {
+        background: gray;
+        transition: 0.2s;
+    }
+
+    .burger:active::before,
+    .burger:active::after {
+        background: gray;
+        transition: 0.2s;
+    }
+
+    .burger::before {
+        top: 0;
+        box-shadow: 0 11px 0 var(--burger-color);
+        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+    }
+
+    .burger::after {
+        bottom: 0;
+        transition: bottom .3s .15s, transform .3s;
+    }
+
+    .burger-checkbox:checked+.burger::before {
+        top: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+        transition: box-shadow .15s, top .3s, transform .3s .15s;
+    }
+
+    .burger-checkbox:checked+.burger::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+        transition: bottom .3s, transform .3s .15s;
+    }
+
+    .menu-list {
+        z-index: 2;
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: grid;
+        justify-content: center;
+        padding: 42px 0;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.97);
+        border-radius: 0 0 30px 30px;
+        transform: translateY(-110%);
+        transition: .4s;
+        width: 100%;
+        height: 592px;
+    }
+
+    .menu-item {
+        padding: 8px 0 30px;
+        text-align: center;
+    }
+
+    .burger-checkbox:checked~.menu-list {
+        transform: translateX(0);
+    }
+
+    .button__burger {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        height: 50px;
+        margin: 24px 0;
+        padding: 20px 40px;
+        justify-content: center;
+        align-items: center;
+        -webkit-transition: 0.2s ease;
+        -moz-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+        transition: 0.2s ease;
+        border-radius: 100px;
+        background: #EBFD36;
+        backdrop-filter: blur(7.5px);
+    }
+
+    .button__burger:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        color: black;
+        fill: black;
+        background: #EEFF90;
+    }
+
+    .button__burger:focus {
+        background-color: #B1C637;
+    }
+
+    .button__burger:active {
+        background-color: #B1C637;
+    }
+
+    .burger-socials {
+        display: flex;
+        margin: 0 auto;
+        gap: 16px;
+    }
+
+    .modal-content {
+        max-width: 420px;
+        max-height: 1402px;
+        padding: 6px 6px 30px;
+    }
+
+    .modal-content-container {
+        margin: 46px auto 0;
+    }
+
+    .modal-content-container-form {
+        max-width: 382px;
+        padding: 12px 0 44px;
+        gap: 16px;
+    }
+
+    .modal-content-container-form-item {
+        height: 38px;
+        margin-top: 14px;
+        padding-bottom: 4px;
+        /* Добавьте внутренний отступ снизу для визуального разделения */
+    }
+
+    .modal-content-container-form-section-custom-item {
+        max-width: 120px;
+        /* Минимальная ширина элемента */
+    }
+
+    .button__consult {
+        height: 44px;
+        margin: 18px 0 27px;
+        padding: 14px 20px;
+    }
+
+    .custom-checkbox-label {
+        padding: 5px 2px;
+        max-width: 180px;
+    }
+
+    .modal-content-container-form-agree-gap {
+        gap: 10px;
+    }
+
+    .checkbox-size {
+        margin-right: 14px;
+    }
+
+    .modal-content-form-item-confirm {
+        max-width: 330px;
+    }
+
+    .modal-content-container-contacts {
+        max-width: 382px;
+        padding-left: 20px;
+    }
+
+
+    .sections__companies {
+        flex-wrap: wrap;
+        width: 382px;
+        gap: 20px;
+    }
+
+    .section__doublecolor {
+        background: linear-gradient(to bottom, white 48%, #222025 48%);
+    }
+
+    .section__container-team {
+        flex-direction: column;
+        max-width: 382px;
+        gap: 60px;
+    }
+
+    .section__container-team-item {
+        width: 380px;
+        height: 400px;
+    }
+
+    .section__container-team-block:first-child h3,
+    .section__container-team-block:first-child p {
+        color: black;
+    }
+
+    .sections__steps-mini {
+        display: block;
+    }
+
+    .sections__steps-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .sections__steps-container-item {
+        flex-direction: column;
+        max-width: 382px;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .sections__steps-container-item-title {
+        max-width: 382px;
+    }
+
+    .sections__steps-container-item img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .section__container-dev {
+        max-width: 382px;
+    }
+
+    .section__container-dev-gallery-test {
+        overflow: hidden;
+        /* Прячет части изображения за пределами блока */
+    }
+
+    .section__container-dev-gallery-test img {
+        height: 320px;
+        /* Фиксированная высота изображения */
+        object-fit: cover;
+        /* Обрезает изображение по ширине и высоте, сохраняя пропорции */
+        object-position: center;
+        /* Центрирует содержимое изображения */
+        border-radius: 0;
+    }
+
+    .blurred-background {
+        width: 382px;
+        height: 526px;
+    }
+
+    .blurred-background .background {
+        filter: blur(0);
+    }
+
+    .content-text {
+        display: none;
+    }
+
+    .sections__margin-bottom {
+        display: block;
+        margin-bottom: 240px;
+    }
+
+    .text__form-contacts {
+        display: none;
+    }
+
+    .sections__contacts-up {
+        max-width: 382px;
+    }
+
+    .sections__contacts {
+        max-width: 382px;
+        gap: 100px;
+    }
+
+    .text__h1 {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .text__h1-about {
+        font-size: 25px;
+        line-height: 32.5px;
+    }
+
+    .text__form-checkbox {
+        font-size: 10px;
+    }
+
+    .text__h5 {
+        font-size: 16px;
+    }
+
+    .text__p-about {
+        font-size: 12px;
+    }
+
+    .text__p-about-table {
+        font-size: 32px;
+    }
+
+    .text__accordion-list {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .text__h4 {
+        margin-bottom: 0;
+    }
+
+}
+/* ============================== */
+/* --- Footer Styles --- */
+/* ============================== */
+
+.footer {
+    /* Базовые стили футера */
+    padding: 80px 0; /* Вертикальные отступы футера */
+}
+
+.footer__background-yellow {
+    background-color: #EBFD36; /* Желтый фон */
+    color: black; /* Текст черного цвета на желтом фоне */
+    fill: black; /* SVG иконки черного цвета на желтом фоне */
+}
+
+.footer__content_wrapper {
+    /* Обертка для центрирования и основной раскладки содержимого футера */
+    max-width: 1200px; /* Пример максимальной ширины, адаптируйте по вашему дизайну */
+    margin: 0 auto; /* Центрирование блока */
+    padding: 0 24px; /* Горизонтальные отступы по бокам */
+    display: flex;
+    flex-direction: column; /* Элементы внутри стекаются вертикально по умолчанию */
+    gap: 40px; /* Промежуток между основными секциями (топ, разделитель, копирайт) */
+}
+
+.footer__top_area {
+    /* Верхняя область футера (логотип + контакты/CTA на десктопе) */
+    display: flex;
+    justify-content: space-between; /* Распределить пространство между логотипом и инфо-блоком */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 40px; /* Промежуток между логотипом и инфо-блоком */
+}
+
+.logo-container-black img {
+    /* Стили для маленького логотипа в футере */
+    width: 160px; /* Пример размера */
+    max-height: 17px; /* Пример максимальной высоты */
+}
+
+.footer__main_info_cta {
+    /* Блок с контактами (десктоп) и CTA */
+    display: flex;
+    /* Используем flex для раскладки контактов и CTA рядом */
+    align-items: flex-start;
+    gap: 80px; /* Промежуток между контактами и CTA */
+    flex-grow: 1; /* Позволяет занимать доступное пространство */
+    justify-content: flex-end; /* Прижимаем блок к правому краю в footer__top_area */
+}
+
+.footer__text-container {
+    /* Контакты для десктопной версии */
+    display: flex; /* Используем flex для раскладки групп контактов */
+    flex-direction: column; /* Группы контактов стекаются вертикально */
+    gap: 20px; /* Промежуток между группами контактов (адрес, телефон/email, телеграм) */
+    /* На мобильных будет скрыт */
+}
+
+.footer__text-container-mobile {
+     /* Контакты для мобильной версии */
+     display: none; /* По умолчанию скрыт на десктопе */
+     /* Будет показан и стилизован в медиа-запросах */
+}
+
+.footer__call_to_action {
+    /* Блок с призывом к действию "Scrivici" */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Выравниваем содержимое по правому краю */
+    gap: 10px; /* Промежуток между заголовком и кнопкой */
+}
+
+.footer__feedback-item {
+    /* Контейнер для текста кнопки "Scrivici" и стрелки */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__feedback-item img {
+    /* Иконка стрелки (возможно, для десктопа) */
+    width: 54px; /* Пример размера */
+    height: 54px; /* Пример размера */
+    margin-left: 20px; /* Отступ от текста */
+    display: block; /* Видима по умолчанию */
+}
+
+.footer__feedback-item svg {
+    /* Иконка стрелки (возможно, для мобильного) */
+    width: 206px; /* Размер SVG */
+    height: 38px; /* Размер SVG */
+    margin-left: 20px; /* Отступ от текста */
+    display: none; /* По умолчанию скрыта */
+    /* Будет показана в медиа-запросе для мобильных */
+}
+
+.footer__separator_line {
+    /* Разделительная линия */
+    width: 100%; /* На всю ширину */
+    height: 1px; /* Толщина линии */
+    background-color: black; /* Цвет линии */
+    margin: 20px 0; /* Вертикальные отступы */
+}
+
+.footer-copyright {
+    /* Блок с копирайтом и ссылками */
+    display: flex;
+    justify-content: space-between; /* Распределить пространство между копирайтом и ссылкой */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    gap: 20px; /* Промежуток между элементами (на случай переноса или на мобильном) */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку при нехватке места */
+}
+
+/* Убедитесь, что стили текста для футера (text__footer-title, text__footer-subtitle, text__footer-p, text__copyright) корректно определены выше */
+
+
+/* ============================== */
+/* --- Media Queries (Footer specific) --- */
+/* ============================== */
+
+/* Пример: Адаптация на брейкпоинте 1024px */
+@media (max-width: 1024px) {
+    .footer__content_wrapper {
+        max-width: 960px; /* Уменьшаем максимальную ширину */
+        padding: 0 20px;
+    }
+
+    .footer__main_info_cta {
+         gap: 40px; /* Уменьшаем промежуток */
+    }
+
+    .footer__feedback-item img {
+        width: 40px;
+        height: 40px;
+    }
+     .footer__feedback-item svg {
+        width: 160px;
+        height: 30px;
+    }
+}
+
+/* Пример: Адаптация на брейкпоинте 758px */
+@media (max-width: 758px) {
+     .footer {
+        padding: 60px 0; /* Уменьшаем вертикальные отступы футера */
+     }
+    .footer__content_wrapper {
+        max-width: 700px; /* Уменьшаем максимальную ширину */
+        padding: 0 15px;
+        gap: 30px; /* Уменьшаем промежуток между секциями */
+    }
+
+    .footer__top_area {
+        flex-direction: column; /* Стэк логотипа и инфо-блока */
+        align-items: center; /* Центрируем по горизонтали */
+        gap: 30px; /* Промежуток между лого и инфо-блоком */
+    }
+
+    .footer__main_info_cta {
+        flex-direction: column; /* Стэк контактов и CTA */
+        align-items: center; /* Центрируем по горизонтали */
+        gap: 30px; /* Промежуток между контактами и CTA */
+        width: 100%; /* Занимаем всю доступную ширину */
+        justify-content: center; /* Центрируем блок внутри footer__top_area */
+    }
+
+    .footer__text-container {
+        align-items: center; /* Центрируем текст контактов */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .footer__call_to_action {
+        align-items: center; /* Центрируем CTA */
+    }
+
+    .footer__feedback-item img {
+        /* Возможно, скрываем десктопную стрелку или меняем размер */
+         width: 30px;
+         height: 30px;
+         margin-left: 15px;
+    }
+     .footer__feedback-item svg {
+         width: 120px;
+         height: 22px;
+         margin-left: 15px;
+    }
+
+    .footer__separator_line {
+        margin: 15px 0; /* Уменьшаем вертикальные отступы */
+    }
+
+    .footer-copyright {
+        flex-direction: column; /* Стэк копирайта и ссылки на политику */
+        gap: 10px; /* Уменьшаем промежуток */
+        align-items: center; /* Центрируем по горизонтали */
+        text-align: center;
+    }
+}
+
+
+/* Пример: Адаптация на брейкпоинте 468px (где, вероятно, появляется бургер-меню и мобильные контакты) */
+@media (max-width: 468px) {
+    .footer {
+        padding: 40px 0; /* Уменьшаем вертикальные отступы футера */
+    }
+    .footer__content_wrapper {
+        max-width: 380px; /* Уменьшаем максимальную ширину */
+        padding: 0 10px;
+        gap: 20px; /* Уменьшаем промежуток между секциями */
+    }
+
+    .footer__top_area {
+        display: none; /* Скрываем десктопную верхнюю секцию */
+    }
+
+    .footer__text-container-mobile {
+        /* Показываем мобильные контакты */
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Промежуток между заголовком и блоком контактов */
+        margin: 0; /* Убираем большой отступ, который был в вашем сниппете */
+        width: 100%;
+        align-items: center; /* Центрируем заголовок */
+        text-align: center;
+    }
+
+    .footer__text-container-mobile h4 {
+         margin-bottom: 10px; /* Уменьшаем отступ после заголовка */
+    }
+
+    .footer__text-container-mobile-contacts {
+        /* Внутренний блок мобильных контактов */
+        display: flex;
+        flex-direction: column; /* Стэк групп контактов */
+        gap: 15px; /* Промежуток между группами контактов */
+        width: 100%; /* Занимает всю ширину родителя */
+        align-items: center; /* Центрируем контакты */
+    }
+
+    .footer__text-container-mobile-contacts > div {
+         /* Блок с телефоном/email */
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* Промежуток между телефоном и email */
+    }
+
+
+    .footer__call_to_action {
+        /* CTA блок, теперь видимый */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Центрируем CTA */
+        gap: 5px;
+    }
+
+
+    .footer__feedback-item {
+        /* Контейнер кнопки на мобильном */
+        flex-direction: column; /* Стэк текста и стрелки */
+        align-items: center;
+    }
+
+    .footer__feedback-item p.text__footer-subtitle {
+        font-size: 40px; /* Уменьшаем размер шрифта кнопки */
+        line-height: normal;
+        margin-bottom: 10px; /* Отступ перед стрелкой */
+    }
+
+     .footer__feedback-item img {
+         display: none; /* Скрываем десктопную стрелку */
+     }
+
+     .footer__feedback-item svg {
+         display: inline-flex; /* Показываем мобильную стрелку */
+         width: 100px; /* Адаптируем размер SVG */
+         height: 18px;
+         margin-left: 0; /* Убираем отступ слева */
+     }
+
+
+    .footer__separator_line {
+        margin: 10px 0; /* Уменьшаем вертикальные отступы */
+    }
+
+    .footer-copyright {
+        flex-direction: column; /* Стэк копирайта и ссылки на политику */
+        gap: 5px; /* Уменьшаем промежуток */
+        align-items: center; /* Центрируем по горизонтали */
+    }
+    .footer-copyright h3 {
+        font-size: 12px; /* Уменьшаем размер шрифта копирайта */
+    }
+}
+
+/* Добавьте или скорректируйте другие медиа-запросы по необходимости */

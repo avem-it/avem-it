@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVEM GROUP - sviluppo web, studio di design">
+    <meta property="og:title" content="AVEM GROUP - sviluppo web, studio di design">
+    <meta property="og:site_name" content="avem-it.it">
+    <meta property="og:url" content="https://avem-it.it">
+    <meta property="og:description" content="AVEM GROUP - sviluppo web, studio di design">
+    <meta property="og:image" content="../img/preview.png">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/size.css">
+    <title>AVEM GROUP &#8212; Ozon</title>
+</head>
+
+<body class="page-about white-bg">
+
+  <div class="link-lang-section">
+    <div class="link-lang-container">
+      <a href="../en/projects-integralbrand.html"><p class="text__h3 text__color-black text__font-family-montserrat text-effect">EN</p></a>
+    </div>
+</div>
+
+    <!-- <header class="header">
+
+    </header> -->
+
+    <!-- Модальное окно обратной связи (для ссылки) -->
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+
+              <div class="modal-content-exit-circle">
+                  <svg class="modal-content-exit-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" fill="">
+                      <path d="M0.642853 0.642822L20.3571 20.3571M20.3571 0.642822L0.642853 20.3571" stroke="" stroke-width="1.23214"/>
+                  </svg>
+              </div>
+
+              <div class="modal-content-container">
+
+                    <div id="formContainer" class="modal-content-container-form">
+                      <h2 class="text__form-title text__color-black text__font-family-unbounded">Compila il modulo</h2>
+
+                      <form id="form" class="modal-content-container-form-section">
+
+                                        <div class="modal-content-container-form-section-custom">
+                                              <div class="modal-content-container-form-section-custon-line">
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="website" name="project_type" value="website" class="hidden-checkbox">
+                                                  <label for="website" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Sito web</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="app" name="project_type" value="app" class="hidden-checkbox">
+                                                  <label for="app" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Applicazione</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="identic" name="project_type" value="identic" class="hidden-checkbox">
+                                                  <label for="identic" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Logo e identità visiva</p></label>
+                                                </div>
+                                          </div>
+                                          <div class="modal-content-container-form-section-custon-line">
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="interface" name="project_type" value="interface" class="hidden-checkbox">
+                                                  <label for="interface" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Interfaccia utente</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="present" name="project_type" value="present" class="hidden-checkbox">
+                                                  <label for="present" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Presentazione</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="research" name="project_type" value="research" class="hidden-checkbox">
+                                                  <label for="research" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Ricerca</p></label>
+                                                </div>
+                                              </div>
+                                              <div class="modal-content-container-form-section-custon-line">
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="motion" name="project_type" value="motion" class="hidden-checkbox">
+                                                  <label for="motion" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Motion design</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="dev" name="project_type" value="dev" class="hidden-checkbox">
+                                                  <label for="dev" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Sviluppo</p></label>
+                                                </div>
+
+                                                <div class="modal-content-container-form-section-custom-item">
+                                                  <input type="checkbox" id="other" name="project_type" value="other" class="hidden-checkbox">
+                                                  <label for="other" class="custom-checkbox-label"><p class="text__form-checkbox text__color-black text__font-family-montserrat">Altro</p></label>
+                                                </div>
+                                              </div>
+                                        </div>
+
+                        <div class="modal-content-container-form-item">
+                          <input type="text" id="company" name="company" placeholder="Nome azienda" class="text__form-label">
+                          <span class="error-message" id="company-error"></span>
+                        </div>
+                        <div class="modal-content-container-form-item">
+                          <input type="text" id="name" name="name" placeholder="Nome e cognome" class="text__form-label">
+                          <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="modal-content-container-form-item">
+                          <input type="email" id="email" name="email" placeholder="Email" class="text__form-label">
+                          <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="modal-content-container-form-item">
+                          <input type="tel" id="phone" name="phone" placeholder="Telefono" class="text__form-label">
+                          <span class="error-message" id="phone-error"></span>
+                        </div>
+                        <div class="modal-content-container-form-item">
+                          <input id="message" name="message" placeholder="Dettagli del progetto" class="text__form-label">
+                          <span class="error-message" id="message-error"></span>
+                        </div>
+                                            <div class="modal-content-container-form-item">
+                                              <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" placeholder="Allega file (max 5 MB)" class="text__form-label">
+                                            </div>
+
+                        <button class="button__consult" type="submit">
+                            <p class="text__h3 text__color-black text__font-family-montserrat">Invia richiesta</p>
+                            <svg class="button__menu-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="">
+                              <path d="M14.4492 6.7511C14.4156 6.6722 14.3665 6.60051 14.3045 6.54015L8.30471 0.690476C8.17962 0.568516 8.00996 0.5 7.83306 0.5C7.65616 0.5 7.4865 0.568516 7.36141 0.690476C7.23632 0.812435 7.16605 0.977848 7.16605 1.15033C7.16605 1.3228 7.23632 1.48821 7.36141 1.61017L12.2237 6.35004H1.16664C0.989837 6.35004 0.820274 6.41851 0.695255 6.54041C0.570235 6.6623 0.5 6.82762 0.5 7C0.5 7.17238 0.570235 7.3377 0.695255 7.45959C0.820274 7.58149 0.989837 7.64996 1.16664 7.64996H12.2237L7.36141 12.3898C7.29947 12.4502 7.25034 12.5219 7.21682 12.6008C7.1833 12.6797 7.16605 12.7643 7.16605 12.8497C7.16605 12.9351 7.1833 13.0196 7.21682 13.0985C7.25034 13.1774 7.29947 13.2491 7.36141 13.3095C7.42335 13.3699 7.49688 13.4178 7.5778 13.4505C7.65873 13.4832 7.74547 13.5 7.83306 13.5C7.92065 13.5 8.00739 13.4832 8.08831 13.4505C8.16924 13.4178 8.24277 13.3699 8.30471 13.3095L14.3045 7.45985C14.3665 7.39949 14.4156 7.3278 14.4492 7.2489C14.4827 7.16999 14.5 7.08541 14.5 7C14.5 6.91458 14.4827 6.83001 14.4492 6.7511Z" fill=""/>
+                            </svg>
+                        </button>
+
+                          <div class="modal-content-container-form-agree-gap">
+                              <p class="text__form-mini text__color-black text__font-family-montserrat">Cliccando il pulsante, acconsenti al <a class="text__effect-mouse text__underline a_black text__decoration-underline" href="" target="_blank">trattamento</a> dei dati personali e accetti la nostra <a class="text__effect-mouse text__underline text__decoration-underline" href="" target="_blank">privacy policy</a>.</p>
+
+                              <div class="modal-content-container-form-mini">
+                                <input type="checkbox" id="confirm" name="confirm" class="checkbox-size">
+                                <label for="confirm" class="modal-content-form-item-confirm text__form-mini text__color-black text__font-family-montserrat">Accetto di ricevere newsletter su nuovi prodotti, offerte e altre informazioni <a class="text__effect-mouse text__underline a_black text__decoration-underline" href="" target="_blank"> (termini e condizioni).</a></label>
+                                <span class="error-message" id="confirm-error"></span>
+                              </div>
+                          </div>
+                      </form>
+
+                    </div>
+
+                    <div id="successMessage" class="modal-content-success">
+                        <div class="modal-content-succes-text">
+                            <h3 class="text__form-sent-title text__color-black text__font-family-unbounded">Grazie!</h3>
+                            <p class="text__form-sent-subtitle text__color-black text__font-family-montserrat">Abbiamo ricevuto la tua richiesta e ti contatteremo a breve.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-content-container-contacts">
+
+                              <div class="modal-content-container-contacts-gap">
+                                  <p class="text__form-contacts-title text__color-gray text__font-family-montserrat">Email</p>
+                                  <a href="mailto:info@avemgroup.ru?subject=Заявка с веб-сайта" class="text__form-contacts-subtitle text__color-black text__font-family-unbounded text-effect">info@avemgroup.ru</a>
+                              </div>
+
+                              <div class="modal-content-container-contacts-gap">
+                                  <p class="text__form-contacts-title text__color-gray text__font-family-montserrat">Telefono</p>
+                                  <a href="tel:+74996732020" class="text__form-contacts-subtitle text__color-black text__font-family-unbounded text__margin text-effect">8 (499) 673 20 20</a>
+                              </div>
+                              <div class="modal-content-container-contacts-gap">
+                                  <p class="text__form-contacts-title text__color-gray text__font-family-montserrat">Messaggistica</p>
+
+                                    <div class="modal-content-container-contacts-socials">
+                                        <a href="https://t.me/avemgroup" target="_blank">
+                                            <svg class="modal-content-container-contacts-socials-icon" xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="">
+                                              <path d="M20.4998 0.00708008C31.5412 0.00708008 40.4928 8.95864 40.4928 20C40.4928 31.0414 31.5412 39.993 20.4998 39.993C9.4584 39.993 0.506836 31.0414 0.506836 20C0.506836 8.95864 9.4584 0.00708008 20.4998 0.00708008ZM27.1967 27.4375C27.1951 27.4415 26.617 28.8844 25.0662 28.2079C24.2232 27.8391 18.9764 23.5641 17.8029 22.6657C20.0889 20.611 22.3748 18.5563 24.6592 16.4993L16.0795 21.9477C14.6756 21.475 13.2709 21.0055 11.8686 20.5297C10.6178 20.1282 10.4748 18.7368 11.8732 18.2071L28.1646 11.8149C28.3209 11.7485 30.135 11.0586 30.135 12.6711L27.1967 27.4375ZM26.3311 27.1133L29.2092 12.6008C29.1607 12.386 28.5162 12.6657 28.5146 12.6665L12.1842 19.0711C11.674 19.2407 11.6615 19.4797 12.1701 19.661L15.9545 20.9352L26.1389 14.4696C26.485 14.2586 27.0068 14.1094 27.3092 14.4727C27.6146 14.8407 27.3584 15.293 27.0615 15.5704C26.7678 15.8446 21.0053 21.0258 19.2436 22.6094L25.4818 27.3844C26.0295 27.5961 26.2709 27.2289 26.3311 27.1133ZM20.4998 0.930517C9.96777 0.930517 1.42949 9.46802 1.42949 20C1.42949 30.5321 9.96777 39.0696 20.4998 39.0696C31.0318 39.0696 39.5701 30.5321 39.5701 20C39.5701 9.46802 31.0318 0.930517 20.4998 0.930517Z" fill=""/>
+                                            </svg>
+                                        </a>
+                                        <a href="https://wa.me/79262949323" target="_blank">
+                                            <svg class="modal-content-container-contacts-socials-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="40" viewBox="0 0 39 40" fill="">
+                                              <path d="M0.749603 39.375C0.562103 39.375 0.437103 39.3125 0.312103 39.1875C0.124603 39 0.0621027 38.75 0.187103 38.5625L2.9996 30.0625C1.1246 27.0625 0.124603 23.5625 0.124603 20C0.124603 9.3125 8.8121 0.625 19.4996 0.625C30.1871 0.625 38.8746 9.3125 38.8746 20C38.8746 30.6875 30.1871 39.375 19.4996 39.375C15.9371 39.375 12.4371 38.375 9.4371 36.5625L0.937103 39.3125C0.874603 39.375 0.812103 39.375 0.749603 39.375ZM9.4996 35.25C9.6246 35.25 9.7496 35.3125 9.8121 35.375C12.6871 37.1875 16.0621 38.1875 19.4996 38.1875C29.4996 38.1875 37.6246 30.0625 37.6246 20.0625C37.6246 10.0625 29.4996 1.875 19.4996 1.875C9.4996 1.875 1.3746 10 1.3746 20C1.3746 23.4375 2.3746 26.8125 4.1871 29.6875C4.3121 29.875 4.3121 30.0625 4.2496 30.1875C4.2496 30.25 4.1871 30.3125 4.1246 30.375L1.7496 37.75L9.3121 35.25H9.4996Z" fill=""/>
+                                              <path d="M24.5 29.5625C22.8125 29.5625 20.6875 29 18.25 27.875C14.875 26.3125 12.125 23.875 10.3125 20.8125C9.24997 19.0625 8.68747 17.4375 8.62497 15.9375C8.62497 15.875 8.31247 13 11.0625 10.8125C11.375 10.5625 11.75 10.4375 12.1875 10.4375H13.3125C14 10.4375 14.6875 10.875 14.9375 11.5L16.625 15.625C16.875 16.25 16.75 17 16.3125 17.5L15.25 18.6875C15.125 18.875 15.0625 19.125 15.1875 19.3125C15.25 19.375 15.3125 19.5625 15.5625 19.875C16.8125 21.5 18.5 22.8125 20.375 23.625C20.6875 23.75 20.875 23.8125 21 23.875C21.1875 23.9375 21.4375 23.875 21.5625 23.6875L22.4375 22.375C22.8125 21.8125 23.5 21.5 24.1875 21.625L28.625 22.3125C29.3125 22.4375 29.875 22.9375 30.0625 23.625L30.3125 24.75C30.4375 25.125 30.375 25.5625 30.1875 25.9375C28.6875 29.1875 25.875 29.5625 25.75 29.5625C25.375 29.5 24.9375 29.5625 24.5 29.5625ZM12.1875 11.6875C12.0625 11.6875 11.9375 11.75 11.875 11.8125C9.62497 13.625 9.87497 15.875 9.87497 15.875C9.93747 17.1875 10.4375 18.625 11.375 20.1875C13.0625 23 15.625 25.3125 18.75 26.75C21.5625 28.0625 23.875 28.5625 25.5625 28.25C25.6875 28.25 27.875 27.875 29.0625 25.3125C29.125 25.1875 29.125 25.0625 29.0625 25L28.875 23.875C28.8125 23.6875 28.6875 23.5 28.4375 23.5L24 22.8125C23.8125 22.8125 23.625 22.875 23.5 23.0625L22.625 24.375C22.1875 25 21.4375 25.3125 20.6875 25.125C20.5 25.0625 20.25 25 19.875 24.8125C17.8125 23.875 15.9375 22.4375 14.5625 20.625C14.3125 20.3125 14.1875 20.125 14.0625 19.9375C13.6875 19.25 13.8125 18.4375 14.3125 17.875L15.375 16.6875C15.5 16.5625 15.5625 16.3125 15.5 16.125L13.8125 12C13.75 11.8125 13.5625 11.6875 13.3125 11.6875H12.1875Z" fill=""/>
+                                            </svg>
+                                        </a>
+                                    </div>
+
+                              </div>
+
+                    </div>
+
+              </div>
+
+      </div>
+</div>
+
+
+          <!-- Бургер-меню (при достижении размера экрана) -->
+
+          <div class="container-burger">
+            <div class="logo-container-small">
+                <img class="logo-small" src="../img/logo__avemgroup-small-black.png" alt="">
+            </div>
+            <nav class="nav-burger">
+                  <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                  <label for="burger-checkbox" class="burger"></label>
+                  <ul class="menu-list">
+
+                    <div class="link-lang-container2">
+                      <a href="../en/about.html"><p class="text__h3 text__color-white text__font-family-montserrat text-effect">EN</p></a>
+                    </div>
+
+                      <div>
+                        <li class="nav__menu-item menu-item"><a class="text__burger text__color-white text__font-family-unbounded text-effect" href="../pages/about.html">Chi siamo</a></li>
+                        <li class="nav__menu-item menu-item"><a class="text__burger text__color-white text__font-family-unbounded text-effect" href="../pages/projects.html">Progetti</a></li>
+                        <li class="nav__menu-item menu-item"><a class="text__burger text__color-white text__font-family-unbounded text-effect" href="../pages/contacts.html">Contatti</a></li>
+                      </div>
+                        <li class="nav__menu-item menu-item text__h3-burger text__color-black text__font-family-montserrat button__burger contactBtn">Ordina un progetto
+                          <svg class="button__menu-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="">
+                              <path d="M14.4492 6.7511C14.4156 6.6722 14.3665 6.60051 14.3045 6.54015L8.30471 0.690476C8.17962 0.568516 8.00996 0.5 7.83306 0.5C7.65616 0.5 7.4865 0.568516 7.36141 0.690476C7.23632 0.812435 7.16605 0.977848 7.16605 1.15033C7.16605 1.3228 7.23632 1.48821 7.36141 1.61017L12.2237 6.35004H1.16664C0.989837 6.35004 0.820274 6.41851 0.695255 6.54041C0.570235 6.6623 0.5 6.82762 0.5 7C0.5 7.17238 0.570235 7.3377 0.695255 7.45959C0.820274 7.58149 0.989837 7.64996 1.16664 7.64996H12.2237L7.36141 12.3898C7.29947 12.4502 7.25034 12.5219 7.21682 12.6008C7.1833 12.6797 7.16605 12.7643 7.16605 12.8497C7.16605 12.9351 7.1833 13.0196 7.21682 13.0985C7.25034 13.1774 7.29947 13.2491 7.36141 13.3095C7.42335 13.3699 7.49688 13.4178 7.5778 13.4505C7.65873 13.4832 7.74547 13.5 7.83306 13.5C7.92065 13.5 8.00739 13.4832 8.08831 13.4505C8.16924 13.4178 8.24277 13.3699 8.30471 13.3095L14.3045 7.45985C14.3665 7.39949 14.4156 7.3278 14.4492 7.2489C14.4827 7.16999 14.5 7.08541 14.5 7C14.5 6.91458 14.4827 6.83001 14.4492 6.7511Z" fill=""/>
+                          </svg></li>
+                      <div>
+                        <li class="text__color-white text__font-family-montserrat"><a class="text__burger-link text-effect" href="mailto:info@avemgroup.ru?subject=Richiesta ad AVEMGROUP">info@avemgroup.ru</a></li>
+                        <li class="text__color-white text__font-family-montserrat"><a class="text__burger-link text-effect" href="tel:+74996732020">+7 499 673 20 20</a></li>
+                      </div>
+
+                      <div class="burger-socials">
+                          <a href="https://t.me/avemgroup" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                                <path d="M20.4998 0.00708008C31.5412 0.00708008 40.4928 8.95864 40.4928 20C40.4928 31.0414 31.5412 39.993 20.4998 39.993C9.4584 39.993 0.506836 31.0414 0.506836 20C0.506836 8.95864 9.4584 0.00708008 20.4998 0.00708008ZM27.1967 27.4375C27.1951 27.4415 26.617 28.8844 25.0662 28.2079C24.2232 27.8391 18.9764 23.5641 17.8029 22.6657C20.0889 20.611 22.3748 18.5563 24.6592 16.4993L16.0795 21.9477C14.6756 21.475 13.2709 21.0055 11.8686 20.5297C10.6178 20.1282 10.4748 18.7368 11.8732 18.2071L28.1646 11.8149C28.3209 11.7485 30.135 11.0586 30.135 12.6711L27.1967 27.4375ZM26.3311 27.1133L29.2092 12.6008C29.1607 12.386 28.5162 12.6657 28.5146 12.6665L12.1842 19.0711C11.674 19.2407 11.6615 19.4797 12.1701 19.661L15.9545 20.9352L26.1389 14.4696C26.485 14.2586 27.0068 14.1094 27.3092 14.4727C27.6146 14.8407 27.3584 15.293 27.0615 15.5704C26.7678 15.8446 21.0053 21.0258 19.2436 22.6094L25.4818 27.3844C26.0295 27.5961 26.2709 27.2289 26.3311 27.1133ZM20.4998 0.930517C9.96777 0.930517 1.42949 9.46802 1.42949 20C1.42949 30.5321 9.96777 39.0696 20.4998 39.0696C31.0318 39.0696 39.5701 30.5321 39.5701 20C39.5701 9.46802 31.0318 0.930517 20.4998 0.930517Z" fill="white"/>
+                              </svg>
+                          </a>
+                          <a href="https://wa.me/79262949323" target="_blank">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="39" height="40" viewBox="0 0 39 40" fill="none">
+                                <path d="M0.749603 39.375C0.562103 39.375 0.437103 39.3125 0.312103 39.1875C0.124603 39 0.0621027 38.75 0.187103 38.5625L2.9996 30.0625C1.1246 27.0625 0.124603 23.5625 0.124603 20C0.124603 9.3125 8.8121 0.625 19.4996 0.625C30.1871 0.625 38.8746 9.3125 38.8746 20C38.8746 30.6875 30.1871 39.375 19.4996 39.375C15.9371 39.375 12.4371 38.375 9.4371 36.5625L0.937103 39.3125C0.874603 39.375 0.812103 39.375 0.749603 39.375ZM9.4996 35.25C9.6246 35.25 9.7496 35.3125 9.8121 35.375C12.6871 37.1875 16.0621 38.1875 19.4996 38.1875C29.4996 38.1875 37.6246 30.0625 37.6246 20.0625C37.6246 10.0625 29.4996 1.875 19.4996 1.875C9.4996 1.875 1.3746 10 1.3746 20C1.3746 23.4375 2.3746 26.8125 4.1871 29.6875C4.3121 29.875 4.3121 30.0625 4.2496 30.1875C4.2496 30.25 4.1871 30.3125 4.1246 30.375L1.7496 37.75L9.3121 35.25H9.4996Z" fill="white"/>
+                                <path d="M24.5 29.5625C22.8125 29.5625 20.6875 29 18.25 27.875C14.875 26.3125 12.125 23.875 10.3125 20.8125C9.24997 19.0625 8.68747 17.4375 8.62497 15.9375C8.62497 15.875 8.31247 13 11.0625 10.8125C11.375 10.5625 11.75 10.4375 12.1875 10.4375H13.3125C14 10.4375 14.6875 10.875 14.9375 11.5L16.625 15.625C16.875 16.25 16.75 17 16.3125 17.5L15.25 18.6875C15.125 18.875 15.0625 19.125 15.1875 19.3125C15.25 19.375 15.3125 19.5625 15.5625 19.875C16.8125 21.5 18.5 22.8125 20.375 23.625C20.6875 23.75 20.875 23.8125 21 23.875C21.1875 23.9375 21.4375 23.875 21.5625 23.6875L22.4375 22.375C22.8125 21.8125 23.5 21.5 24.1875 21.625L28.625 22.3125C29.3125 22.4375 29.875 22.9375 30.0625 23.625L30.3125 24.75C30.4375 25.125 30.375 25.5625 30.1875 25.9375C28.6875 29.1875 25.875 29.5625 25.75 29.5625C25.375 29.5 24.9375 29.5625 24.5 29.5625ZM12.1875 11.6875C12.0625 11.6875 11.9375 11.75 11.875 11.8125C9.62497 13.625 9.87497 15.875 9.87497 15.875C9.93747 17.1875 10.4375 18.625 11.375 20.1875C13.0625 23 15.625 25.3125 18.75 26.75C21.5625 28.0625 23.875 28.5625 25.5625 28.25C25.6875 28.25 27.875 27.875 29.0625 25.3125C29.125 25.1875 29.125 25.0625 29.0625 25L28.875 23.875C28.8125 23.6875 28.6875 23.5 28.4375 23.5L24 22.8125C23.8125 22.8125 23.625 22.875 23.5 23.0625L22.625 24.375C22.1875 25 21.4375 25.3125 20.6875 25.125C20.5 25.0625 20.25 25 19.875 24.8125C17.8125 23.875 15.9375 22.4375 14.5625 20.625C14.3125 20.3125 14.1875 20.125 14.0625 19.9375C13.6875 19.25 13.8125 18.4375 14.3125 17.875L15.375 16.6875C15.5 16.5625 15.5625 16.3125 15.5 16.125L13.8125 12C13.75 11.8125 13.5625 11.6875 13.3125 11.6875H12.1875Z" fill="white"/>
+                              </svg>
+                          </a>
+                      </div>
+
+                  </ul>
+
+            </nav>
+      </div>
+
+
+      <div class="header__menu-container-about">
+        <ul class="header__menu-container-list">
+            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./about.html">Chi siamo</a></li>
+            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./projects.html">Progetti</a></li>
+            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./contacts.html">Contatti</a></li>
+            <li class="header__menu-container-list-item text__h3 text__color-black text__font-family-montserrat button__menu contactBtn">Ordina un progetto
+                <svg class="button__menu-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="">
+                    <path d="M14.4492 6.7511C14.4156 6.6722 14.3665 6.60051 14.3045 6.54015L8.30471 0.690476C8.17962 0.568516 8.00996 0.5 7.83306 0.5C7.65616 0.5 7.4865 0.568516 7.36141 0.690476C7.23632 0.812435 7.16605 0.977848 7.16605 1.15033C7.16605 1.3228 7.23632 1.48821 7.36141 1.61017L12.2237 6.35004H1.16664C0.989837 6.35004 0.820274 6.41851 0.695255 6.54041C0.570235 6.6623 0.5 6.82762 0.5 7C0.5 7.17238 0.570235 7.3377 0.695255 7.45959C0.820274 7.58149 0.989837 7.64996 1.16664 7.64996H12.2237L7.36141 12.3898C7.29947 12.4502 7.25034 12.5219 7.21682 12.6008C7.1833 12.6797 7.16605 12.7643 7.16605 12.8497C7.16605 12.9351 7.1833 13.0196 7.21682 13.0985C7.25034 13.1774 7.29947 13.2491 7.36141 13.3095C7.42335 13.3699 7.49688 13.4178 7.5778 13.4505C7.65873 13.4832 7.74547 13.5 7.83306 13.5C7.92065 13.5 8.00739 13.4832 8.08831 13.4505C8.16924 13.4178 8.24277 13.3699 8.30471 13.3095L14.3045 7.45985C14.3665 7.39949 14.4156 7.3278 14.4492 7.2489C14.4827 7.16999 14.5 7.08541 14.5 7C14.5 6.91458 14.4827 6.83001 14.4492 6.7511Z" fill=""/>
+                </svg></li>
+        </ul>
+    </div>
+
+      <div class="sections__projects-integralbrand-img">
+          <img src="../img/projects/full-integralbr.png" alt="">
+      </div>
+
+
+
+      <div class="sections__container padding-side">
+
+
+          <div class="sections__projects-integralbrand-container">
+              <div class="sections__projects-integralbrand-container-title">
+                  <div>
+                      <h2 class="text__form-contacts-subtitle text__color-gray text__font-family-unbounded">Branding per<br>Integral Analytics</h2>
+                  </div>
+
+                  <div>
+                      <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Integral Analytics è un'azienda IT specializzata in soluzioni ad alte prestazioni e innovative, che aiutano a risolvere le sfide del mondo digitale.</p>
+                      <br>
+                      <br>
+                      <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Un viaggio digitale coinvolgente. Un'estetica ispirata alla tecnologia.</p>
+                  </div>
+              </div>
+
+              <div class="sections__projects-integralbrand-container-about">
+                  <div class="sections__projects-integralbrand-container-about-title">
+                      <h3 class="text__footer-title text__color-ligthgray text__font-family-unbounded text__decoration-uppercase">Informazioni</h3>
+                  </div>
+
+                  <div class="sections__projects-integralbrand-container-about-list">
+                        <div>
+                          <h4 class="text__h4-projects text__color-ligthgray text__font-family-montserrat">Cliente</h4>
+                          <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Integral Analytics</p>
+                        </div>
+
+                        <div>
+                          <h4 class="text__h4-projects text__color-ligthgray text__font-family-montserrat">Anno</h4>
+                          <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">2024</p>
+                        </div>
+
+                        <div>
+                          <h4 class="text__h4-projects text__color-ligthgray text__font-family-montserrat">Tipo di lavoro</h4>
+                          <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Analisi Design Animazione</p>
+                        </div>
+
+                        <div>
+                          <h4 class="text__h4-projects text__color-ligthgray text__font-family-montserrat">Tipologia progetto</h4>
+                          <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Identità visiva</p>
+                        </div>
+                  </div>
+              <div>
+          </div>
+          </div>
+      </div>
+      </div>
+
+
+      <div class="sections__projects-integralbrand-scheme">
+          <div class="grid-container">
+                <!-- Верхний ряд -->
+                <div class="item left-top"><img src="../img/projects/integralbrand/phone.png" alt=""></div>
+                <div class="item center-top"><img src="../img/projects/integralbrand/site.png" alt=""></div>
+                <div class="item right-top"><img src="../img/projects/integralbrand/watch.png" alt=""></div>
+
+                <!-- Нижний ряд -->
+                <div class="item left-bottom"><img src="../img/projects/integralbrand/bage.png" alt=""></div>
+                <div class="item center-bottom"><img src="../img/projects/integralbrand/card.png" alt=""></div>
+                <div class="item center-bottom"><img src="../img/projects/integralbrand/tablet.png" alt=""></div>
+                <div class="item right-bottom"><img src="../img/projects/integralbrand/visit.png" alt=""></div>
+          </div>
+      </div>
+
+      <div class="sections__container">
+
+
+        <div class="sections__projects-integralbrand-container-2">
+            <div class="sections__projects-integralbrand-container-title">
+                <div>
+                </div>
+
+                <div class="padding-side">
+                    <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Integral Analytics è un'azienda IT specializzata in soluzioni ad alte prestazioni e innovative, che aiutano a risolvere le sfide del mondo digitale.</p>
+                    <br>
+                    <br>
+                    <p class="text__steps-subtitle text__color-gray text__font-family-montserrat">Un viaggio digitale coinvolgente. Un'estetica ispirata alla tecnologia.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="sections__projects-integralbrand-example">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/biglogo.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/grouplogo.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/manycards.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/mertch.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/tablet-phone.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/bage-list.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/mockup.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/complect.png" alt="">
+          <img class="sections__projects-integralbrand-example-img-first" src="../img/projects/integralbrand/laptop.png" alt="">
+    </div>
+
+
+        <div class="sections__project-integralbrand-contacts">
+            <div class="sections__project-integralbrand-contacts-container">
+                  <div class="sections__project-integralbrand-contacts-container-block">
+                      <div>
+                            <h3 class="text__steps-subtitle text__color-white text__font-family-montserrat">Hai un progetto?</h3>
+                            <p class="text__steps-subtitle text__color-ligthgray text__font-family-montserrat">Scrivici</p>
+                      </div>
+                      <div>
+                        <h3 class="text__steps-subtitle text__color-white text__font-family-montserrat">Indirizzo</h3>
+                        <p class="text__steps-subtitle text__color-ligthgray text__font-family-montserrat">Ufficio 233M Presa 1, Edificio 8 Naberezhnaya Presnenskaya 123317 Mosca, Russia</p>
+                      </div>
+                  </div>
+
+                  <div class="sections__project-integralbrand-contacts-container-block">
+                      <div>
+                            <h3 class="text__steps-subtitle text__color-white text__font-family-montserrat">Email</h3>
+                            <p class="text__steps-subtitle text__color-ligthgray text__font-family-montserrat">info@avemgroup.ru</p>
+                      </div>
+                      <div>
+                            <h3 class="text__steps-subtitle text__color-white text__font-family-montserrat">Telefono</h3>
+                            <p class="text__steps-subtitle text__color-ligthgray text__font-family-montserrat">+7 499 673 20 20</p>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    <div class="background-black-2">
+          <div class="section__container-dev">
+
+                <section class="blurred-background">
+                    <div class="background"></div>
+                    <div class="content">
+                      <div class="content-text">
+                        <p class="text__steps-subtitle text__color-yellow text__font-family-montserrat">Guarda i nostri progetti</p>
+                              <a class="text__effect-underline-projects" href="../pages/projects.html"><h3 class="text__form-contacts-subtitle text__color-white text__font-family-unbounded text-effect">Sito Integral Analytics</h3>
+                                <svg class="svg__arrow-projects" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="">
+                                <path d="M2.5 32.5981L32.5 2.59814M32.5 2.59814V32.5981M32.5 2.59814H2.81919" stroke="" stroke-width="5"/>
+                              </svg></a>
+                      </div>
+                    </div>
+                </section>
+
+                <div class="sections__margin-bottom">
+                    <a class="sections__projects text__effect-projects" href="./pages/about.html"><h3 class="text__p text__font-family-montserrat">I nostri progetti</h3>
+                      <svg class="svg__arrow-projects" xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="">
+                      <path d="M13.9492 7.3987C13.9156 7.31373 13.8665 7.23653 13.8045 7.17152L7.80471 0.871876C7.67962 0.740535 7.50996 0.666748 7.33306 0.666748C7.15616 0.666748 6.9865 0.740535 6.86141 0.871876C6.73632 1.00322 6.66605 1.18135 6.66605 1.3671C6.66605 1.55284 6.73632 1.73098 6.86141 1.86232L11.7237 6.96679H0.666642C0.489837 6.96679 0.320274 7.04053 0.195255 7.1718C0.0702352 7.30307 0 7.48111 0 7.66675C0 7.85239 0.0702352 8.03043 0.195255 8.1617C0.320274 8.29296 0.489837 8.36671 0.666642 8.36671H11.7237L6.86141 13.4712C6.79947 13.5362 6.75034 13.6134 6.71682 13.6984C6.6833 13.7834 6.66605 13.8744 6.66605 13.9664C6.66605 14.0584 6.6833 14.1494 6.71682 14.2344C6.75034 14.3194 6.79947 14.3966 6.86141 14.4616C6.92335 14.5267 6.99688 14.5782 7.0778 14.6134C7.15873 14.6486 7.24547 14.6667 7.33306 14.6667C7.42065 14.6667 7.50739 14.6486 7.58831 14.6134C7.66924 14.5782 7.74277 14.5267 7.80471 14.4616L13.8045 8.16197C13.8665 8.09696 13.9156 8.01976 13.9492 7.93479C13.9827 7.84982 14 7.75873 14 7.66675C14 7.57476 13.9827 7.48368 13.9492 7.3987Z" fill=""/>
+                    </svg></a>
+                </div>
+          </div>
+
+    </div>
+
+
+     <footer class="footer footer__background-yellow padding-side">
+
+      <div class="footer__container">
+
+            <div class="logo-container-black">
+                <a href="../index.html"><img class="logo-small" src="../img/logo__avemgroup-small.svg" alt=""></a>
+            </div>
+
+            <div class="footer__text-container">
+                  <div>
+                      <h4 class="text__h4 text__color-black text__font-family-unbounded text__decoration-uppercase">Contatti:</h4>
+                      <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="https://yandex.ru/maps/-/CDWIJWlI" target="_blank">Ufficio 233M Presa 1, Edificio 8 Naberezhnaya Presnenskaya 123317 Mosca, Russia</a></p>
+                  </div>
+
+                  <div>
+                      <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="tel:+74996732020">+7 499 673 20 20</a></p>
+                      <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="mailto:info@avemgroup.ru?subject=Richiesta per AVEMGROUP">info@avemgroup.ru</a></p>
+                  </div>
+
+                  <div>
+                      <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow text__decoration-underline" href="https://t.me/oleganson1" target="_blank">Telegram</a></p>
+                  </div>
+            </div>
+
+      </div>
+
+      <div class="footer__feedback">
+              <p class="text__footer-title text__color-black text__font-family-unbounded text__decoration-uppercase">Hai un progetto?</p>
+
+              <div class="footer__feedback-item contactBtn">
+                  <p class="text__footer-subtitle text__color-black text__font-family-unbounded text__decoration-uppercase text-effect-yellow">Scrivici
+                      <svg xmlns="http://www.w3.org/2000/svg" width="206" height="38" viewBox="0 0 206 38" fill="none">
+                        <path d="M204.768 17.2322C205.744 18.2085 205.744 19.7914 204.768 20.7677L188.858 36.6776C187.882 37.6539 186.299 37.6539 185.322 36.6776C184.346 35.7013 184.346 34.1184 185.322 33.1421L199.464 18.9999L185.322 4.8578C184.346 3.88149 184.346 2.29858 185.322 1.32227C186.299 0.345956 187.882 0.345954 188.858 1.32226L204.768 17.2322ZM-1.10893e-06 16.5L203 16.4999L203 21.4999L1.10893e-06 21.5L-1.10893e-06 16.5Z" fill="black"/>
+                      </svg>
+                  </p>
+                  <img src="../img/img__footer-arrow.png" alt="">
+              </div>
+
+              <div class="footer__feedback-line"></div>
+
+            <!-- Футер для размера 428px -->
+
+              <div class="footer__text-container-mobile">
+                    <div>
+                        <h4 class="text__h4 text__color-black text__font-family-unbounded text__decoration-uppercase">Contatti:</h4>
+                    </div>
+
+                    <div class="footer__text-container-mobile-contacts">
+
+                            <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="https://yandex.ru/maps/-/CDWIJWlI" target="_blank">Ufficio 233M Presa 1, Edificio 8 Naberezhnaya Presnenskaya 123317 Mosca, Russia</a></p>
+                            <div>
+                                <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="tel:+74996732020">+7 499 673 20 20</a></p>
+                                <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow" href="mailto:info@avemgroup.ru?subject=Richiesta per AVEMGROUP">info@avemgroup.ru</a></p>
+                                <p class="text__footer-p text__color-black text__font-family-montserrat"><a class="text-effect-yellow text__decoration-underline" href="https://t.me/oleganson1" target="_blank">Telegram</a></p>
+                            </div>
+                    </div>
+              </div>
+
+              <div class="footer-copyright">
+                  <a href=""><h3 class="text__copyright text__color-black text__font-family-montserrat text-effect-yellow text__decoration-underline">©avemgroup 2025</h3></a>
+                  <a href=""><h3 class="text__copyright text__color-black text__font-family-montserrat text-effect-yellow text__decoration-underline">Informativa sulla privacy</h3></a>
+              </div>
+      </div>
+
+</footer>
+
+
+<script>
+
+
+    // Скрипт модального окна обратной связи
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // Получить модальное окно
+    var modal = document.getElementById("contactModal");
+
+    // Получить все кнопки с классом contactBtn
+    var btns = document.getElementsByClassName("contactBtn");
+
+    // Получить элемент <span>, который закрывает модальное окно
+    var span = document.getElementsByClassName("modal-content-exit-close")[0];
+
+    // Добавить обработчик события для каждой кнопки
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function() {
+            modal.style.display = "block";
+            document.body.classList.add("no-scroll");
+        }
+    }
+
+    // Когда пользователь нажимает на <span> (x), закрыть модальное окно
+    span.onclick = function() {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    }
+
+    // Когда пользователь нажимает в любом месте за пределами модального окна, закрыть его
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        }
+    }
+
+    // Валидация формы обратной связи
+    const form = document.getElementById('form');
+    const fields = [
+        { id: 'company', errorMessage: 'Вы пропустили поле' },
+        { id: 'name', errorMessage: 'Вы пропустили поле' },
+        { id: 'email', errorMessage: 'Вы пропустили поле или ввели некорректный адрес электронной почты', validate: validateEmail },
+        { id: 'phone', errorMessage: 'Вы пропустили поле' },
+        { id: 'message', errorMessage: 'Вы пропустили поле' },
+        { id: 'confirm', errorMessage: 'Вы должны согласиться на получение рассылки', type: 'checkbox' }
+    ];
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault(); // Останавливаем стандартное поведение формы
+
+        let isValid = true;
+
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            const errorSpan = document.getElementById(field.id + '-error');
+
+            if (field.type === 'checkbox') {
+                if (!input.checked) {
+                    showError(input, errorSpan, field.errorMessage);
+                    isValid = false;
+                } else {
+                    hideError(input, errorSpan);
+                }
+            } else {
+                if (input.value.trim() === '' || (field.validate && !field.validate(input.value))) {
+                    showError(input, errorSpan, field.errorMessage);
+                    isValid = false;
+                } else {
+                    hideError(input, errorSpan);
+                }
+            }
+        });
+
+        if (isValid) {
+            // Если форма валидна, отправляем данные
+            form.classList.add('_sending');
+            let formData = new FormData(form);
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                // Обработка успешной отправки
+                document.getElementById('formContainer').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'flex';
+                form.reset();
+            } else {
+                showModal('Ошибка при отправке формы. Попробуйте еще раз.');
+            }
+            form.classList.remove('_sending');
+        } else {
+            // Показываем сообщение, если форма содержит ошибки
+            showModal('Введены некорректные данные');
+        }
+    });
+
+    fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        const errorSpan = document.getElementById(field.id + '-error');
+
+        // Убираем ошибку при вводе текста
+        if (field.type === 'checkbox') {
+            input.addEventListener('change', function () {
+                if (input.checked) {
+                    hideError(input, errorSpan);
+                }
+            });
+        } else {
+            input.addEventListener('input', function () {
+                if (input.value.trim() !== '') {
+                    hideError(input, errorSpan);
+                }
+            });
+        }
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function showError(input, errorSpan, message) {
+        errorSpan.textContent = message;
+        errorSpan.classList.add('visible');
+        input.classList.add('error-border');
+    }
+
+    function hideError(input, errorSpan) {
+        errorSpan.textContent = '';
+        errorSpan.classList.remove('visible');
+        input.classList.remove('error-border');
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
