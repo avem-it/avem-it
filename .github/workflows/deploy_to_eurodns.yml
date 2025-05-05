@@ -57,13 +57,13 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.1 # Указываем, какое действие использовать и его версию
         with:
           # Параметры подключения, берем значения из секретов GitHub:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ FTP_SERVER }}
+          username: ${{ FTP_USERNAME }}
+          password: ${{ FTP_PASSWORD }}
 
           # Если ваш хостинг EuroDNS использует нестандартный порт,
           # раскомментируйте строку ниже и убедитесь, что у вас есть секрет FTP_PORT
-          # port: ${{ secrets.FTP_PORT }}
+          # port: ${{ FTP_PORT }}
 
           # Протокол: ftp, ftps (FTP over SSL), sftp (SSH File Transfer Protocol).
           # SFTP (обычно порт 22) наиболее безопасен, если ваш хостинг его поддерживает.
@@ -82,7 +82,7 @@ jobs:
           # ЭТО КРАЙНЕ ВАЖНО! Убедитесь, что путь указан верно
           # (например, public_html, public_html/ваш_сайт, /httpdocs и т.п.)
           # Берем значение из секрета FTP_REMOTE_PATH
-          remote-dir: ${{ secrets.FTP_REMOTE_PATH }}
+          remote-dir: ${{ FTP_REMOTE_PATH }}
 
           # Опции синхронизации (по желанию):
           # delete-remote: true # Удалять файлы на сервере, которых нет локально. Используйте ОСТОРОЖНО!
