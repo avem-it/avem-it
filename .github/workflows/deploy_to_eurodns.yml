@@ -90,13 +90,8 @@ jobs:
 
           exclude: |
 
-              .git/
-              .github/
-              node_modules/
-              .DS_Store
-              **/*.css~
-              **/README.md
-              **/COMMITMENT
+              *.git/
+              *.github/
 
           #   # Если у вас был шаг сборки в папку 'dist', НЕ ИСКЛЮЧАЙТЕ 'dist/'!
           #   # exclude: |
