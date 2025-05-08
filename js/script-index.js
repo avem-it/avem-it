@@ -150,35 +150,15 @@ function hideError(input, errorSpan) {
 
 });
 
-// Появление нижнего меню после того, как пользователь доматывает экран до него
+// Залипание меню
 
-document.addEventListener('DOMContentLoaded', function () {
-const menu = document.querySelector('.header__menu-container-sticky');
-const delay = 500; // Задержка в миллисекундах (2 секунды)
+const menuElement = document.querySelector('.header__menu-container'); // Находим наше единственное меню
+const stickyThreshold = 449; // Пример: меню прилипает после 10px прокрутки (нужно подобрать)
 
-window.addEventListener('scroll', function () {
-const menuPosition = menu.getBoundingClientRect().top;
-const screenHeight = window.innerHeight;
-
-if (menuPosition < screenHeight) {
-  setTimeout(() => {
-    menu.classList.add('visible');
-  }, delay);
-}
-});
-});
-
-
-// В бургер-меню определение нахождения экрана пользователя (от чего бурегр-меню "отталкивается" сверху при появлении)
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const burgerCheckbox = document.querySelector('.burger-checkbox');
-//   const menuList = document.querySelector('.menu-list');
-
-//   burgerCheckbox.addEventListener('change', () => {
-//     if (burgerCheckbox.checked) {
-//       const scrollY = window.scrollY;
-//       menuList.style.setProperty('--menu-start', `${scrollY}px`);
-//     }
-//   });
-// });
+window.addEventListener('scroll', () => {
+    if (window.scrollY > stickyThreshold) {
+        menuElement.classList.add('is-sticky'); // Добавляем класс
+    } else {
+        menuElement.classList.remove('is-sticky'); // Удаляем класс
+    }
+})
