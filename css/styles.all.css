@@ -1,0 +1,2063 @@
+/* === 1. RESET === */
+
+@charset "utf-8";
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" attribute is exclud, because otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* remove default dot (•) sign */
+::marker {
+    content: initial;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+}
+/* === 2. VARIABLES & BASE === */
+
+:root {
+
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray: #222025;
+    --color-lightgray: #777275;
+    --color-yellow: #EBFD36;
+    --color-yellow-hover: #EEFF90;
+    --color-yellow-active: #B1C637;
+
+    /* Font families */
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-source:      "Source Serif 4", serif;
+    --ff-unbounded:   Unbounded, cursive;
+
+    /* Hero typography scaling */
+    --hero-min:   32px;
+    --hero-max:   55px;
+    --hero-fluid: 5vw;
+}
+
+/* ============================== */
+/* Header logo responsiveness */
+/* ============================== */
+
+.logo-big {
+    width: auto;
+    height: auto;
+    max-height: clamp(80px, 10vw, 120px);
+}
+
+/* ============================== */
+/* --- Footer Styles --- */
+/* ============================== */
+
+  /* Transition durations */
+  --t-default: 0.3s ease;
+  --t-fast:    0.2s ease;
+
+.footer {
+    padding: 80px 0;
+}
+.footer__background-yellow {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    fill: var(--color-black);
+}
+.footer__content_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.footer__top_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.logo-container-black img {
+    width: 160px;
+    max-height: 17px;
+}
+.footer__main_info_cta {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start; /* выравнивание по горизонтали */
+  justify-content: flex-start; /* выравнивание по вертикали */
+  gap: 30px; /* ВЕРТИКАЛЬНЫЙ гэп между блоками, 30px) */
+  flex-grow: 1;
+}
+.footer__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer__text-container-mobile { display: none; }
+.footer__call_to_action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.footer__feedback-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.footer__feedback-item img {
+    width: 54px;
+    height: 54px;
+    margin-left: 20px;
+    display: block;
+}
+.footer__feedback-item svg {
+    width: 206px;
+    height: 38px;
+    margin-left: 20px;
+    display: none;
+}
+.footer__separator_line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    margin: 20px 0;
+}
+.footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+html {scroll-behavior: smooth; }
+
+body {}
+  
+  .page-index {
+    /* max-width: 1920px; */
+    width: 100%;
+    margin: 0 auto;
+    background-color: #222025;
+    /* padding: 0 4px; */
+  }
+  
+  .page-about {
+    /* max-width: 1920px; */
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    /* padding: 0 4px; */
+  }
+  
+  .page-projects {
+    /* max-width: 1920px; */
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: white; */
+    background: linear-gradient(to bottom, white 60%, #222025 60%);
+  }
+  
+  .logo-iwa__container {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 120px;
+  }
+  
+  .link-lang-section {
+    max-width: 1920px;
+    margin: 40px 20px 0 auto;
+    /* display: flex; */
+  }
+  
+  .link-lang-container {
+    max-width: 1700px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 0 100px 40px 0;
+  }
+  
+  .link-lang-container2 {
+    display: flex;
+    justify-content: start;
+  }
+  
+  
+  .logo-container-small {
+    z-index: 2;
+    display: flex;
+    margin: 0 auto -12px;
+    justify-content: center;
+  }
+  
+  .logo-container-black {
+    display: flex;
+    max-width: 1330px;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 100px;
+  }
+  
+  .logo-small {
+    max-width: 297px;
+    width: 100%; 
+    height: auto;
+    max-height: 30px;
+  }
+  
+  .subtitle {
+    margin: 60px auto 110px;
+    width: 100%;
+    justify-content: start;
+  }
+  
+  .subtitle__main-title {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .subtitle__contacts {
+    max-width: 1445px;
+  }
+  
+  .nav-burger {
+    display: none;
+  }
+  
+  .button__menu {
+    padding: 20px 38px; /* Убедитесь, что этот паддинг применяется */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    border-radius: 100px;
+    background: #EBFD36;
+    backdrop-filter: blur(7.5px);
+  }
+  
+  .button__menu-icon {
+    margin-left: 10px;
+  }
+  
+  .button__menu:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    color: black;
+    fill: black;
+    background: #EEFF90;
+  }
+  
+  .button__menu:focus {
+    background-color: #B1C637;
+  }
+  
+  .button__menu:active {
+    background-color: #B1C637;
+  }
+  
+  .svg__arrow-down {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+  }
+  
+  .svg__arrow-down-img {
+    display: flex;
+    justify-content: center;
+    stroke: white;
+    fill: none;
+    animation: moveUpDown 2.8s ease-in-out infinite;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+  }
+  
+  .svg__arrow-down-img:hover {
+    stroke: black;
+    fill: #EBFD36;
+    transition: 0.2s;
+  }
+  
+  .svg__arrow-down-img:active {
+    fill: #B1C637;
+    transition: 0.2s;
+  }
+  
+  .svg__arrow-down-img:focus {
+    fill: #B1C637;
+    transition: 0.2s;
+  }
+  
+  .svg__arrow-down-black-img {
+    display: flex;
+    justify-content: center;
+    stroke: black;
+    fill: none;
+    animation: moveUpDown 2.8s ease-in-out infinite;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+  }
+  
+  .svg__arrow-down-black-img:hover {
+    stroke: black;
+    fill: #EBFD36;
+    transition: 0.2s;
+  }
+  
+  .svg__arrow-down-black-img:active {
+    fill: #B1C637;
+    transition: 0.2s;
+  }
+  
+  .svg__arrow-down-black-img:focus {
+    fill: #B1C637;
+    transition: 0.2s;
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .container-burger {
+    display: none;
+    z-index: 1;
+    padding-bottom: 40px;
+  }
+  
+  .button__about {
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    width: 170px;
+    height: 47px;
+    padding: 15.932px 30.271px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 79.661px;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(5.974576473236084px);
+  }
+  
+  .padding-side {
+    padding: 0 6px;
+  }
+    
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0;
+  
+    padding-bottom: 96px;
+  }
+  
+  .footer__background-yellow {
+    background: #EBFD36;
+  }
+  
+  .footer__background-black {
+    background-color: #222025;
+  }
+  
+  .footer__container {
+    display: flex;
+    max-width: 1446px;
+    width: 100%;
+    margin: 133px auto 250px;
+    justify-content: space-between;
+  }
+  
+  .footer__text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 30px;
+  }
+  
+  .footer__text-container-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer__feedback {
+    max-width: 1446px;
+    width: 100%;
+    margin: 0 auto;
+    /* text-align: start; */
+  }
+  
+  .footer__feedback-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer__feedback-item svg {
+    display: none;
+  }
+  
+  .footer__feedback-line {
+    margin: 60px 0 70px;
+    border-top: 2px solid black;
+  }
+  
+  .footer__feedback-line-white {
+    margin: 60px 0 70px;
+    border-top: 2px solid white;
+  }
+  
+  .footer__feedback-item img {
+    width: 72px;
+    height: 72px;
+    align-self: center;
+  }
+  
+  .footer-copyright {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  /* Стили страницы "О Нас" */
+  
+  .about__section-subtitle {
+    position: relative;
+    text-align: left;
+  }
+  
+  .sections__companies {
+    display: flex;
+    width: 100%; /* Будет занимать всю доступную ширину */
+    max-width: 1445px; /* Но не больше */
+    margin: 0 auto 250px; /* Добавьте auto для центрирования */
+    padding: 0 15px; /* Добавьте небольшие горизонтальные отступы, чтобы контент не прилипал к краям вьюпорта */
+    box-sizing: border-box; /* Убедитесь, что паддинг не увеличивает ширину */
+    justify-content: space-between;
+    flex-wrap: wrap; /* Возможно, элементы внутри должны переноситься на меньших экранах */
+    gap: 20px;
+    margin-bottom: 250px;
+  }
+  
+  .sections__companies img {
+    max-width: 240px;
+    max-height: 88px;
+    margin: auto 0;
+  }
+  
+  .img-ozon {
+    height: 55px;
+  }
+  
+  .img-beregi {
+    height: 55px;
+  }
+  
+  .section__container-team {
+    display: flex;
+    width: 1445px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: calc(6.25rem + ((1vw - 19.2px) * 9.0909));
+  }
+  
+  .section__container-team-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section__container-team-item {
+    width: 100%; /* Теперь элемент будет занимать всю доступную ширину родителя */
+    max-width: 440px; /* Но не будет шире 440px */
+    /* height: 560px; /* Рассмотрите удаление или изменение на auto */
+    height: auto; /* Или попробуйте auto, если изображение определяет высоту */
+    border-radius: 30px;
+    background: #ACB0B9;
+  }
+  
+  .section__container-team-item-img {
+    width: 100%;
+    border-radius: 30px;
+  }
+  
+  .section__container-dev {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1444px;
+   }
+  
+  .section__doublecolor {
+    background: linear-gradient(to bottom, white 40%, #222025 40%);
+  }
+  
+  .background-black {
+    z-index: -1;
+    padding-top: 250px;
+    background-color: #222025;
+    margin: 0 auto;
+  }
+  
+  .background-black-2 {
+    z-index: -1;
+    background-color: #222025;
+    margin: 0 auto;
+  }
+    
+  .section__container-dev-margin-bottom {
+    margin-bottom: 37px;
+  }
+  
+  /* Аккордеон для видов работ */
+  
+  .accordion-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 90px; /* Расстояние между столбцами */
+    max-width: 1400px; /* Ширина */
+    table-layout: fixed;
+  }
+  
+  .accordion-column {
+    flex: 1;
+    max-width: 546px; /* Ширина колонок */
+  }
+  
+  .accordion-list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tab {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9eaec;
+    margin-bottom: 10px; /* Расстояние между аккордеонами */
+  }
+  
+  .tab-title {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .tab-title::after {
+    content: '+';
+    float: right;
+    padding-right: 20px;
+  }
+  
+  .tab-content {
+    max-height: 0; /* Высота скрытого контента */
+    overflow: hidden; /* Обрезаем содержимое */
+    transition: max-height 0.2s ease; /* Плавный переход */
+  }
+  
+  input[type="checkbox"]:checked + .tab-title {
+  }
+  
+  input[type="checkbox"]:checked + .tab-title::after {
+    content: '−';
+  }
+  
+  input[type="checkbox"]:checked ~ .tab-content {
+    max-height: 500px; /* Максимальная высота для раскрытого контента */
+    transition: max-height 0.6s ease; /* Плавный переход */
+  }
+
+  .section__container-dev-gallery-test {
+    display: flex;
+    width: 100%;
+    padding-top: 250px;
+    background-color: #222025;
+  }
+  
+  .section__container-dev-gallery-test img {
+    margin: 0 auto;
+    border-radius: 30px;
+    text-align: center;
+  }
+  
+  /* Секция Этапы Работы */
+  
+  .sections__steps-mini {
+    display: none;
+  }
+  
+  .sections__steps {
+  }
+  
+  .sections__steps-up {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sections__steps-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sections__steps-container-item {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    gap: 50px;
+  }
+  
+  .sections__steps-container-item-text {
+    display: flex;
+    margin-bottom: 50px;
+  }
+  
+  .sections__steps-container-item-title {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blurred-background {
+    position: relative;
+    width: 100%; /* Занимает всю доступную ширину */
+    max-width: 1444px; /* Но не шире */
+    height: auto; /* Или height: 0; padding-bottom: [соотношение сторон в %]; для сохранения пропорций */
+    padding-bottom: 56.65%; /* Пример: 818/1444 * 100% */
+    margin: 250px auto 270px;
+    overflow: hidden;
+    border-radius: 30px;
+  }
+  
+  .blurred-background .background {
+    z-index: 0; /* Размытый фон находится ниже текста */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/projects/preview-integralwb.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(35%); /* Применяем размытие только к фону */
+  }
+  
+  .background {
+    width: 100%;
+  }
+  
+  .blurred-background .content {
+    position: absolute; /* Или relative, в зависимости от расположения */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Важно! Контент не должен быть шире родителя */
+    padding: 20px; /* Внутренние отступы, чтобы текст не прилипал к краям */
+    box-sizing: border-box;
+  }
+  
+  .content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .sections__margin-bottom {
+    display: none;
+  }
+
+  /* Страница Контакты */
+  
+  .sections__contacts-up {
+    margin: 0 auto 250px;
+    justify-content: space-between;
+    max-width: 1445px;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+  }
+  
+  .sections__contacts {
+    display: flex;
+    margin: 0 auto 100px;
+    justify-content: space-between;
+    max-width: 1445px;
+    gap: 120px;
+  }
+  
+  .sections__contacts-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .section__contacts-img {
+    filter: grayscale(50);
+  }
+  
+  /* Страница Проекта */
+  
+  .sections__page-projects-container {
+    max-width: 1445px;
+    margin: 166px auto 0;
+  }
+  
+  .sections__page-projects {
+    display: flex;
+    flex-direction: column; /* Вертикальная структура */
+    gap: 24px; /* Расстояние между строками */
+    max-width: 1445px; /* Ограничение ширины контейнера */
+    margin: 100px auto; /* Центровка по горизонтали */
+    padding: 0 15px; /* Внутренние отступы */
+  }
+  
+  .sections__page-projects img {
+    width: 100%; /* Картинка занимает всю ширину родителя */
+    max-height: auto; /* Сохраняет пропорции */
+    border-radius: 20px; /* Скругленные углы */
+    object-fit: cover; /* Подгон изображения */
+  }
+  
+  .sections__page-projects-double {
+    display: flex; /* Горизонтальная структура для картинок 2 и 3 */
+    gap: 13px; /* Отступ между картинками */
+  }
+  
+  .sections__page-projects-double img {
+    width: calc(50% - 6.5px); /* Вычитаем половину gap, чтобы элементы не вылезали */
+    height: auto; /* Автоматическая высота для пропорциональности */
+    border-radius: 20px; /* Скругленные углы */
+    object-fit: cover; /* Умное обрезание изображения */
+  }
+  
+  /* Стили для модального окна */
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 14px;
+  }
+  
+  .modal-content {
+    z-index: 1001;
+    border-radius: 20px;
+    background: #FFF;
+    margin: 2% auto;
+    padding: 10px 10px 50px;
+    max-width: 1680px;
+    max-height: 1260px;
+    position: relative; /* Добавлено для позиционирования крестика */
+  }
+  
+  .modal-content-exit-circle {
+    position: absolute; /* Абсолютное позиционирование внутри модального окна */
+    top: 40px;
+    right: 40px;
+  }
+  
+  .modal-content-exit-close {
+    width: 40px;
+    height: 40px;
+    stroke: black;
+    -webkit-transition: 0.3s ease; /* Safari and Chrome */
+    -moz-transition: 0.3s ease; /* Firefox 4 */
+    -o-transition: 0.3s ease; /* Opera */
+  }
+  
+  .modal-content-exit-close:hover {
+    stroke: #DEF347;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .modal-content-exit-close:focus {
+    stroke: #B1C637;
+    transition: 0.3s;
+  }
+  
+  .modal-content-exit-close:active {
+    stroke: #B1C637;
+    transition: 0.3s;
+  }
+  
+  .modal-content-container {
+    display: flex;
+    margin-top: 104px;
+    justify-content: center;
+  }
+  
+  .modal-content-container-form-section-custom {
+  }
+  
+  .modal-content-container-form-section-custon-line {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+    justify-content: space-between;
+  }
+  
+  .modal-content-container-form-section-custom-item {
+    max-width: 300px; /* Минимальная ширина элемента */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-checkbox-label {
+    display: block;
+    white-space: nowrap; /* Запрещает перенос текста на новую строку */
+    padding: 10px 44px;
+    border-radius: 100px;
+    border: 1px solid #222025;
+    cursor: pointer;
+    text-align: center; /* Центрирует текст внутри метки */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .custom-checkbox-label-contacts {
+    border: 1px solid gray;
+  }
+  
+  /* Стилизация выбранного состояния */
+  .hidden-checkbox:checked + .custom-checkbox-label {
+    background-color: #B1C637;
+    border: 1px solid #B1C637;
+    color: black;
+  }
+  
+  /* Наведение мышью */
+  .custom-checkbox-label:hover {
+    background-color: #DEF347;
+  }
+  
+  .modal-content-container-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 722px;
+    padding-right: 108px;
+    gap: 25px;
+    z-index: 1000000000000000;
+    border-right: 1px #676767 solid;
+  }
+  
+  .modal-content-container-form-contacts {
+    display: flex;
+    flex-direction: column;
+    max-width: 722px;
+    gap: 25px;
+  }
+  
+  .modal-content-container-form-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content-container-form-item {
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    margin-top: 25px;
+    gap: 10px; /* Промежуток между меткой и полем ввода */
+    border-bottom: 1px solid #676767;
+    padding-bottom: 10px; /* Добавьте внутренний отступ снизу для визуального разделения */
+  }
+  
+  .modal-content-container-form-item input {
+    /* flex: 2; */
+    width: 100%;
+  }
+
+  /* Стили для контейнера ошибки */
+  
+  .error-message {
+    display: none; /* Скрываем текст ошибки по умолчанию */
+    color: red;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .button__consult {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+    padding: 20px 39px;
+    background: #DEF347;
+    border-radius: 100px;
+    justify-content: center;
+    -webkit-transition: 0.3s ease; /* Safari and Chrome */
+    -moz-transition: 0.3s ease; /* Firefox 4 */
+    -o-transition: 0.3s ease; /* Opera */
+  }
+  
+  .button__consult:hover {
+    background: #EEFF90;
+    transition: 0.3s;
+  }
+  
+  .button__consult:active {
+    background: #B1C637;
+    transition: 0.3s;
+  }
+  
+  .modal-content-container-form-agree-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .modal-content-container-form-mini {
+    position: relative;
+    display: flex;
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+  }
+  
+  .modal-content-container-contacts {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    gap: 50px;
+    max-width: 600px;
+    padding-left: 108px;
+  }
+  
+  .modal-content-container-contacts-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-content-container-contacts-socials {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .modal-content-container-contacts-socials-icon {
+    width: 50px;
+    height: 50px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+  }
+  
+  .modal-content-container-contacts-socials-icon:hover {
+    fill: darkgray;
+    transition: 0.2s;
+  }
+  
+  .modal-content-container-contacts-socials-icon:active {
+    fill: lightgray;
+    transition: 0.2s;
+  }
+  
+  .modal-content-container-contacts-socials-icon:focus {
+    fill: lightgray;
+    transition: 0.2s;
+  }
+  
+  /* Стили чек-бокса */
+  
+  .modal-content-form-item-confirm {
+    width: 100%;
+    max-width: 580px;
+  }
+  
+  .checkbox-size {
+    margin-right: 16px;
+  }
+  
+  #confirm {
+    appearance: none;
+    width: 2rem; /* Пример: 30px / 16px (базовый размер шрифта) */
+    height: 2rem; /* Пример: 30px / 16px */
+    border: 1px solid #676767;
+    border-radius: 5px;
+    z-index: 100; /* Более разумное значение */
+    position: relative;
+    transition: 0.2s;
+    flex-shrink: 0; /* Не даем чекбоксу сжиматься */
+    margin-right: 1rem; /* Или используйте существующий margin-right */
+  }
+  
+  #confirm:checked {
+    background-color: #23B020; /* Черный цвет заливки при установленном чекбоксе */
+  }
+  
+  #confirm:checked::after {
+    content: '';
+    display: block;
+    /* Скорректируйте размеры и позицию галочки относительно родителя (2rem x 2rem) */
+    width: 0.8rem; /* Примерно */
+    height: 1.2rem; /* Примерно */
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0; /* Толщина линии галочки в rem */
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 0.4rem; /* Скорректируйте позицию */
+    left: 0.6rem; /* Скорректируйте позицию */
+  }
+  
+  .modal-content-container-form-mini {
+    position: relative;
+    display: flex; /* Убедитесь, что flexbox включен */
+    align-items: center; /* Выравнивание по центру */
+  }
+  
+  .modal-content-form-item-confirm {
+     /* ... */
+     /* Удалите width: 100%; max-width: 580px; если родитель уже flex и вы хотите, чтобы текст занимал оставшееся место */
+     width: auto; /* Или flex-grow: 1; */
+     max-width: none;
+  }
+  .modal-content-success {
+    display: none; /* Скрываем сообщение об успешной отправке по умолчанию */
+    max-width: 646px;
+    padding-right: 108px;
+  }
+  
+  .modal-content-succes-text {
+    text-align: left;
+    align-self: center;
+  }
+  
+  .modal-content-success h3 {
+    margin-bottom: 25px;
+  }
+  
+  .modal-content-success p {
+  }
+  
+  /* Ошибка валидации полей */
+  
+  .error-message {
+    position: absolute;
+    background-color: #ffffff;
+    color: #b20000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    display: none;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 10;
+    transform: translateX(-50%);
+  }
+  
+  .error-message::before {
+    content: "!";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #b20000;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .error-message.visible {
+    display: flex;
+  }
+  
+  .error-border {
+    border-color: #b20000;
+  }
+  
+  .modal-content-container-form-item {
+    position: relative;
+  }
+  
+  .error-message {
+    bottom: -45px;
+    left: 50%;
+  }
+  
+  /* Страница о проектах - брендинг Интеграл-Аналитикс */
+  
+  .sections__projects-integralbrand-img {
+    display: flex;
+    background-color: #222025;
+  }
+  
+  .sections__projects-integralbrand-img img {
+    width: 100%; /* Изображение растягивается на всю ширину контейнера */
+    height: auto; /* Сохраняются пропорции изображения */
+    display: block; /* Убирает возможные пробелы под изображением */
+  }
+  
+  .sections__projects-integralbrand-container {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    gap: 150px;
+  }
+  
+  .sections__projects-integralbrand-container-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    gap: 150px;
+    margin: 0 auto; /* Центрируем */
+    padding: 0 15px; /* Добавляем горизонтальные отступы */
+    box-sizing: border-box;
+  }
+  
+  .sections__projects-integralbrand-container-title {
+    display: flex;
+    width: 100%;
+    max-width: 1444px;
+    gap: 150px;
+  }
+  
+  .sections__projects-integralbrand-container-title > div {
+    flex: 1; /* Одинаковая ширина для каждого блока */
+  }
+  
+  .sections__projects-integralbrand-container-about {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sections__projects-integralbrand-container-about-title {
+    margin-bottom: 29px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+  }
+  
+  .sections__projects-integralbrand-container-about-list {
+    display: flex;
+    gap: 83px;
+  }
+  
+  .sections__projects-integralbrand-container-about-list > div {
+    max-width: 164px;
+  }
+  
+  /* Внешний контейнер */
+  .sections__projects-integralbrand-scheme {
+    display: flex;
+    justify-content: center;
+    background-color: #222025;
+    width: 100%;
+    padding: 208px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  /* Контейнер сетки */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(10, auto); /* <--- Строки теперь авто-высоты */
+    /* ИЛИ grid-template-rows: repeat(10, minmax(min-content, max-content)); */
+    gap: 20px; /* Если 20px гэп слишком большой на узких экранах, его тоже нужно адаптировать в медиа-запросе */
+    max-width: 1444px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .item img {
+    width: 100%;
+    height: auto; /* <--- Позволяем высоте изображения определяться пропорциями */
+    /* object-fit: cover; /* Возможно, все еще нужен для обрезки, если пропорции изображений не совпадают с пропорциями ячеек */
+    display: block; /* Убираем нижний пробел */
+  }
+  /* ... правила для item (left-top, center-top и т.д.) не меняются, они определяют, СКОЛЬКО строк занимает элемент, а не их фиксированную высоту ... */
+  
+  /* Элементы сетки */
+  .item {
+    border-radius: 20px;
+    position: relative; /* Для правильного позиционирования картинки */
+    overflow: hidden; /* Чтобы картинка не выходила за пределы секции */
+  }
+  
+  .item img {
+    width: 100%; /* Ширина изображения 100% от родительского контейнера */
+    height: 100%; /* Высота изображения 100% от родительского контейнера */
+    object-fit: cover; /* Изображение будет покрывать контейнер, сохраняя пропорции */
+  }
+  
+  /* Верхний ряд */
+  .left-top {
+    grid-row: span 3; /* Первая секция: с 1 по 3 строки */
+  }
+  
+  .center-top {
+    grid-row: span 5; /* Вторая секция: с 1 по 5 строки */
+    grid-column: span 2; /* Занимает 2 столбца (первый и второй) */
+  }
+  
+  .right-top {
+    grid-row: span 7; /* Третья секция: с 1 по 3 строки */
+  }
+  
+  /* Нижний ряд */
+  .left-bottom {
+    grid-row: span 7; /* Левая нижняя секция: с 4 по 10 строки */
+  }
+  
+  .center-bottom {
+    grid-row: span 5; /* Центральная нижняя секция: с 6 по 10 строки */
+    grid-column: span 1; /* Занимает 1 столбец */
+  }
+  
+  .right-bottom {
+    grid-row: span 3; /* Правая нижняя секция: с 7 по 10 строки */
+    grid-column: span 1; /* Занимает 1 столбец */
+  }
+  
+  .sections__projects-integralbrand-example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #222025;
+    width: 100%;
+    padding: 208px 6px;
+    gap: 15px;
+    text-align: center; /* Центрирует содержимое по горизонтали */
+  }
+  
+  .sections__projects-integralbrand-example-img-first {
+    width: 100%; /* Устанавливает ширину изображения в процентах от родительского контейнера */
+    max-width: 1444px; /* Ограничивает максимальную ширину изображения */
+    margin: 0 auto; /* Центрирует изображение */
+    border-radius: 35px;
+    height: auto; /* Сохраняет пропорции изображения */
+  }
+  
+  .sections__projects-integralbrand-example-img-first:last-child {
+    background-color: lightgray;
+  }
+  
+  .sections__project-integralbrand-contacts {
+    background-color: #222025;
+    padding: 0 6px;
+  }
+  
+  .sections__project-integralbrand-contacts-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1444px;
+    gap: 300px;
+    justify-content: flex-end;
+  }
+  
+  .sections__project-integralbrand-contacts-container-block {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    max-width: 344px;
+  }
+
+/* === 3. TYPOGRAPHY === */
+
+/* ============================== */
+/* --- Font Styles --- */
+/* ============================== */
+
+/* Font Families */
+.text__font-family-montserrat { font-family: var(--ff-montserrat); }
+.text__font-family-source    { font-family: var(--ff-source); }
+.text__font-family-unbounded { font-family: var(--ff-unbounded); }
+
+/* Font Colors */
+.text__color-white    { color: var(--color-white); }
+.text__color-black    { color: var(--color-black); }
+.text__color-gray     { color: var(--color-gray); }
+.text__color-yellow   { color: var(--color-yellow); }
+.text__color-ligthgray{ color: var(--color-lightgray); }
+
+/* Text Styling */
+.text__decoration-uppercase     { text-transform: uppercase; }
+.text__decoration-underline     { text-decoration: underline; }
+.text__decoration-border-bottom { border-bottom: 1px currentColor solid; }
+
+/* Text Effects */
+.text-effect {
+    transition: var(--t-default);
+}
+.text-effect:hover {
+    color: var(--color-yellow-hover);
+    text-decoration-color: var(--color-yellow-hover);
+    transition: var(--t-fast);
+}
+.text-effect:focus,
+.text-effect:active {
+    color: var(--color-yellow-active);
+}
+
+.text-effect-yellow {
+    transition: var(--t-default);
+}
+.text-effect-yellow:hover {
+    color: var(--color-white);
+    text-decoration-color: var(--color-white);
+    transition: var(--t-fast);
+}
+.text-effect-yellow:focus,
+.text-effect-yellow:active {
+    color: var(--color-lightgray);
+    text-decoration-color: var(--color-lightgray);
+}
+
+/* ============================== */
+/* --- Font Sizes and Other Properties --- */
+/* ============================== */
+
+.text__h1 {
+    text-align: center;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px;
+}
+.text__h1-about {
+    text-align: left;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 65px;
+}
+.text__h3 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__h3-burger {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.text__h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+.text__h4-projects {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.text__h5 {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+}
+.text__burger {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__burger-link {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+.text__p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0;
+}
+.text__p-team {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+.text__copyright {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__team-title {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 30px 0 15px;
+}
+.text__p-about {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__p-about-table {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+.text__accordion-normal {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.text__accordion-numbers {
+    width: 40px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 39px;
+    margin-right: 30px;
+}
+.text__accordion-list {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.text__about-subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+.text__steps-title {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+.text__steps-subtitle {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+.text__effect-projects {
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    transition: var(--t-default);
+}
+.text__effect-projects:hover .svg__arrow-projects,
+.text__effect-projects:hover h3 {
+    color: var(--color-black);
+    fill: var(--color-black);
+    transition: var(--t-default);
+}
+.text__form-title {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+.text__form-checkbox {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+.text__form-label {
+    color: #969599;
+    font-family: var(--ff-montserrat);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text__form-label::placeholder {
+    font-family: var(--ff-montserrat);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #969599;
+    text-align: left;
+    font-family: var(--ff-montserrat);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+.text__form-mini {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+}
+.text__form-sent-title {
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__form-sent-subtitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.text__form-contacts {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 432px;
+}
+.text__form-contacts-margin { margin-bottom: 100px; }
+.text__form-contacts-title {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+.text__form-contacts-subtitle {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+.text__form-contacts-message {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 39px;
+}
+.text__effect-underline-projects {
+    display: flex;
+    justify-content: center;
+    stroke: var(--color-white);
+    transition: var(--t-fast);
+}
+.text__effect-underline-projects:hover {
+    stroke: var(--color-yellow-hover);
+    transition: var(--t-fast);
+}
+.text__effect-underline-projects:focus,
+.text__effect-underline-projects:active {
+    color: var(--color-yellow-active);
+    transition: var(--t-fast);
+}
+.text__effect-underline-projects:hover .svg__arrow-projects,
+.text__effect-underline-projects:hover h3 {
+    color: var(--color-yellow-hover);
+    fill: var(--color-yellow-hover);
+    transition: var(--t-fast);
+}
+.text__effect-underline-projects:focus .svg__arrow-projects,
+.text__effect-underline-projects:focus h3,
+.text__effect-underline-projects:active .svg__arrow-projects,
+.text__effect-underline-projects:active h3 {
+    color: var(--color-yellow-active);
+    fill: var(--color-yellow-active);
+    transition: var(--t-fast);
+}
+
+/* --------------------------------
+   Page-Scroll Hijacking & Sections
+-------------------------------- */
+
+/* 1) Базовый сброс box-sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  /* 2) Desktop-детектор + отключение скролла при data-hijacking="on" */
+  @media only screen and (min-width: 300px) {
+    
+    /* используется JS для определения, что MQ ≥300px */
+    body::before {
+      content: 'desktop';
+      color: transparent;
+    }
+    /* при включённом hijacking-режиме убираем скролл */
+    body[data-hijacking="on"] {
+      overflow: hidden;
+    }
+  }
+  
+  /* 3) Общие стили для секций */
+  .cd-section {
+    height: auto;
+    min-height: 100vh;
+    height: 100vh;
+  }
+  .cd-section > div {
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+  }
+  
+  /* 4) Только URLs фоновых картинок */
+  .cd-section:nth-of-type(1) > div { background-image: url(../img/projects/preview-integralwb.png); }
+  .cd-section:nth-of-type(2) > div { background-image: url(../img/projects/preview-integralbr.png); }
+  .cd-section:nth-of-type(3) > div { background-image: url(../img/projects/preview-ozon.png); }
+  .cd-section:nth-of-type(4) > div { background-image: url(../img/projects/preview-gorizont.png); }
+  .cd-section:nth-of-type(5) > div { background-image: url(../img/projects/preview-beregi.png); }
+  
+  /* 5) Позиционирование для эффекта scroll-hijacking */
+   @media only screen and (min-width: 300px) {
+    .cd-section > div {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      height: 100vh;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    body[data-hijacking="on"] .cd-section > div {
+      position: absolute;
+    }
+    [data-animation="rotate"] .cd-section > div {
+      transform-origin: center bottom;
+    }
+  }
+ 
+/* === 4. HEADER & LOGOS === */
+
+.header {
+    max-width: 1920px;
+    height: 100vh;
+    margin: 224px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__menu-container {
+    z-index: 10;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    height: 73px;
+    padding: 25px 0px 25px 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(7.5px);
+    margin-top: 43px; /* <--- Добавьте новое значение верхнего отступа */
+    margin-bottom: 90px; /* Сохраните нижний отступ */
+    margin-left: auto; /* Сохраните центрирование */
+    margin-right: auto; /* Сохраните центрирование */
+  }
+  
+  .header__menu-container.is-sticky {
+    position: fixed; /* Прилипает к вьюпорту */
+    top: 0; /* Прилипает к самому верху (или 40px, если нужен отступ) */
+    left: 0; /* Важно для fixed */
+    right: 0; /* Важно для fixed */
+    z-index: 1000; /* Или другое высокое значение, чтобы меню было поверх всего */
+    /* Убедитесь, что у него есть фон, чтобы перекрывать контент под ним */
+    box-sizing: border-box;
+    transition: top 0.0s ease, opacity 0.0s ease; /* Добавьте переходы, если меню должно плавно появляться/менять положение */
+    opacity: 1; /* Гарантируем видимость в этом состоянии */
+    /* Возможно, добавьте box-shadow для отделения от контента */
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+}
+
+  .header__menu-container-about {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px;
+    z-index: 10;
+    display: flex;
+    width: 629px;
+    height: 84px;
+    padding: 25px 0px 25px 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(7.5px);
+    margin: 0 auto 94px;
+  }
+  
+   .header__menu-container-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+/* ============================================= */
+/* Центрирование .logo-container-big на любых экранах */
+/* ============================================= */
+.logo-container-big {
+    width: 100%;
+    max-width: 1445px; /* или ваш текущий max-width */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+
+/* === 5. COMPONENTS & SECTIONS === */
+
+.sections__container {
+    display: flex;
+    flex-direction: column; /* Изменено с row на column */
+    /* margin: 0 auto 270px; */
+    /* margin: 0 auto 182px; */
+    /* margin: 0 auto 100px; */
+    margin: 0 auto;
+    max-width: 1445px;
+    /* margin: 30px 0 162px; */
+  }
+  
+  .sections__gap {
+    display: flex;
+    flex-direction: column;
+    gap: 296px;
+    margin-bottom: 210px;
+  }
+  
+  .sections__projects {
+    display: flex;
+    flex-direction: row;
+    /* margin: 70vh auto 0; */
+    margin: 90px auto 0;
+    width: 100%;
+    padding: 20px 40px;
+    border: 1px solid #EBFD36;
+    border-radius: 100px;
+    justify-content: center;
+  }
+  
+  .sections__projects:hover {
+    background-color: #EBFD36;
+  }
+  
+  .sections__projects:active {
+    border: 1px solid #B1C637;
+    background-color: #B1C637;
+  }
+  
+  .sections__projects:focus {
+    border: 1px solid #B1C637;
+    background-color: #B1C637;
+  }
+  
+  .svg__arrow-projects {
+    /* width: 16px;
+    height: 16px; */
+    margin-left: 40px;
+    align-self: center;
+    fill: white;
+    transition: 0.2s ease;
+  }
+  
+  .sections__container-projects {
+    position: relative;
+    height: 500vh; /* Для демонстрации прокрутки */
+  }
+
+/* === 6. MEDIA QUERIES === */
+
+/* ============================== */
+/* --- Footer Media Queries --- */
+/* ============================== */
+
+@media (max-width: 1300px) { /* Пример: уменьшаем гэп до срабатывания основного респонсивного правила */
+  .sections__projects-integralbrand-container-title {
+      gap: 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .accordion-container {
+      gap: 60px; /* Уменьшаем гэп на средних экранах */
+      flex-direction: column; /* Возможно, на более узких экранах стоит располагать колонки вертикально */
+  }
+  .accordion-column {
+      max-width: 100%; /* Чтобы колонки занимали всю доступную ширину при вертикальном расположении */
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__content_wrapper { max-width: 960px; padding: 0 20px; }
+  .footer__main_info_cta      { gap: 40px; }
+  .footer__feedback-item img  { width: 40px; height: 40px; }
+  .footer__feedback-item svg  { width: 160px; height: 30px; }
+  .sections__contacts {
+      gap: 60px; /* Уменьшаем гэп */
+      flex-direction: column; /* На узких экранах лучше располагать вертикально */
+      align-items: center; /* Центрируем при вертикальном расположении */
+  }
+  .sections__contacts-gap {
+       width: 100%; /* Чтобы блоки занимали всю ширину */
+       max-width: none; /* Убираем ограничение ширины, если оно было */
+       align-items: center; /* Центрируем содержимое блоков */
+       text-align: center; /* Центрируем текст */
+   }
+}
+
+@media (max-width: 1000px) { /* Примерный брейкпоинт */
+  .modal-content-container {
+      flex-direction: column; /* Располагаем блоки вертикально */
+      gap: 40px; /* Добавляем отступ между вертикальными блоками */
+      align-items: center; /* Центрируем блоки */
+  }
+  .modal-content-container-form {
+      padding-right: 0; /* Убираем правый отступ */
+      border-right: none; /* Убираем вертикальную линию */
+      padding-bottom: 40px; /* Добавляем отступ снизу, если нужно */
+      border-bottom: 1px #676767 solid; /* Добавляем горизонтальную линию */
+      max-width: 500px; /* Ограничиваем ширину формы, чтобы она не была слишком широкой */
+      width: 100%;
+  }
+  .modal-content-container-contacts {
+      padding-left: 0; /* Убираем левый отступ */
+      max-width: 500px; /* Ограничиваем ширину контактов */
+      width: 100%;
+      align-items: center; /* Центрируем контакты */
+  }
+  .modal-content-container-contacts-socials {
+      justify-content: center; /* Центрируем иконки соцсетей */
+  }
+  .sections__projects-integralbrand-container-title {
+    flex-direction: column;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+   .accordion-container {
+    gap: 30px;
+  }
+  .sections__contacts {
+  width: 100%; /* Чтобы блоки занимали всю ширину */
+  max-width: none; /* Убираем ограничение ширины, если оно было */
+  align-items: center; /* Центрируем содержимое блоков */
+  text-align: center; /* Центрируем текст */
+  }
+  .footer { padding: 60px 0; }
+    .footer__content_wrapper {
+        max-width: 700px;
+        padding: 0 15px;
+        gap: 30px;
+    }
+    .footer__top_area {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer__main_info_cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+    .footer__text-container {
+        align-items: center;
+        text-align: center;
+    }
+    .footer__call_to_action {
+        align-items: center;
+    }
+    .footer__feedback-item img {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+    .footer__feedback-item svg {
+        width: 120px;
+        height: 22px;
+        margin-left: 15px;
+    }
+    .footer__separator_line { margin: 15px 0; }
+    .footer__text-container-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer__text-container-mobile h4 {
+        margin-bottom: 10px;
+    }
+    .footer__text-container-mobile-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+    .footer__text-container-mobile-contacts > div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer__feedback-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__feedback-item p.text__footer-subtitle {
+        font-size: 40px;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    .footer__feedback-item img { display: none; }
+    .footer__feedback-item svg {
+        display: inline-flex;
+        width: 100px;
+        height: 18px;
+        margin-left: 0;
+    }
+    .footer-copyright {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-copyright h3 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) { /* Дополнительный брейкпоинт для еще более узких модальных окон */
+  .modal-content {
+      padding: 10px 10px 30px; /* Уменьшаем внутренние отступы модального окна */
+      margin: 1% auto; /* Возможно, уменьшить вертикальный маржин */
+  }
+   .modal-content-container-form {
+       padding-bottom: 30px;
+       gap: 15px; /* Уменьшаем гэп формы */
+   }
+  .modal-content-container-form-section-custon-line {
+      flex-direction: column; /* Чекбоксы тоже могут идти вертикально */
+      gap: 5px;
+  }
+   .modal-content-container-contacts {
+       gap: 30px; /* Уменьшаем гэп контактов */
+   }
+   .modal-content-exit-circle {
+       top: 20px; /* Перемещаем кнопку закрытия */
+       right: 20px;
+   }
+ }

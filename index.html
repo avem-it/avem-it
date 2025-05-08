@@ -41,10 +41,12 @@ if (empty($_SESSION['csrf_token']))
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap" rel="stylesheet">
 
 <!-- CSS -->
-<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/styles.all.css">
+
+<!--
 <link rel="stylesheet" href="./css/styles.css">
 <link rel="stylesheet" href="./css/page-scroll-effect.css">
-<link rel="stylesheet" href="./css/styles.combined.css">
+<link rel="stylesheet" href="./css/styles.combined.css"> -->
 
 <!-- Modernizr -->
 <script src="js/modernizr.js" defer></script>
@@ -59,6 +61,7 @@ if (empty($_SESSION['csrf_token']))
     </div> -->
 
     <!-- Переключение языка -->
+
     <div class="link-lang-container">
       <a href="./en/index.html" aria-label="English version">
         <p class="text__h3 text__color-white text__font-family-montserrat text-effect">EN</p>
@@ -66,9 +69,8 @@ if (empty($_SESSION['csrf_token']))
     </div>
 
     <!-- Бургер-меню -->
+
             <div class="container-burger">
-                <!--  <div class="logo-container-small">
-                  <img class="logo-small" src="./img/logo__avemgroup-small.png" alt=""> -->
                 </div>
                 <nav class="nav-burger">
                       <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
@@ -124,7 +126,7 @@ if (empty($_SESSION['csrf_token']))
                 </div>
             </div>
 
-            <div class="header__menu-container-index">
+            <div class="header__menu-container">
                 <ul class="header__menu-container-list">
                     <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/about.html">Chi siamo</a></li>
                     <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/projects.html">Progetti</a></li>
@@ -144,6 +146,7 @@ if (empty($_SESSION['csrf_token']))
             </div>
 
 <main role="main">
+
     <div id="contactModal" class="modal">
           <div class="modal-content">
 
@@ -217,25 +220,30 @@ if (empty($_SESSION['csrf_token']))
                               <input type="text" id="company" name="company" placeholder="Nome azienda" class="text__form-label">
                               <span class="error-message" id="company-error"></span>
                             </div>
+                            
                             <div class="modal-content-container-form-item">
                               <input type="text" id="name" name="name" placeholder="Nome e cognome" class="text__form-label">
                               <span class="error-message" id="name-error"></span>
                             </div>
+                            
                             <div class="modal-content-container-form-item">
                               <input type="email" id="email" name="email" placeholder="Email" class="text__form-label">
                               <span class="error-message" id="email-error"></span>
                             </div>
+                            
                             <div class="modal-content-container-form-item">
                               <input type="tel" id="phone" name="phone" placeholder="Telefono" class="text__form-label">
                               <span class="error-message" id="phone-error"></span>
                             </div>
+                            
                             <div class="modal-content-container-form-item">
                            	 <textarea id="message" name="message" placeholder="Dettagli del progetto" class="text__form-label"></textarea>
                               <span class="error-message" id="message-error"></span>
                             </div>
-                                                <div class="modal-content-container-form-item">
-                                                  <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" placeholder="Allega file (max 5 MB)" class="text__form-label">
-                                                </div>
+                            
+                            <div class="modal-content-container-form-item">
+                              <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" placeholder="Allega file (max 5 MB)" class="text__form-label">
+                            </div>
 
                             <button class="button__consult" type="submit">
                                 <p class="text__h3 text__color-black text__font-family-montserrat">Invia richiesta</p>
@@ -301,144 +309,71 @@ if (empty($_SESSION['csrf_token']))
           </div>
     </div>
 
-
-  <!--  <div class="logo-container-small">
-      <img class="logo-small" src="./img/logo__avemgroup-small.png" alt=""> -->
-    </div> 
-
-
-
 <!-- Прилипающее меню -->
-
-
-  <div class="header__menu-container-sticky">
-      <div>
-          <ul class="header__menu-container-list">
-              <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/about.html">Chi siamo</a></li>
-              <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/projects.html">Progetti</a></li>
-              <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/contacts.html">Contatti</a></li>
-              <li class="header__menu-container-list-item text__h3 text__color-black text__font-family-montserrat button__menu contactBtn">Ordina un progetto
-              <svg class="button__menu-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="">
-              <path d="M14.4492 6.7511C14.4156 6.6722 14.3665 6.60051 14.3045 6.54015L8.30471 0.690476C8.17962 0.568516 8.00996 0.5 7.83306 0.5C7.65616 0.5 7.4865 0.568516 7.36141 0.690476C7.23632 0.812435 7.16605 0.977848 7.16605 1.15033C7.16605 1.3228 7.23632 1.48821 7.36141 1.61017L12.2237 6.35004H1.16664C0.989837 6.35004 0.820274 6.41851 0.695255 6.54041C0.570235 6.6623 0.5 6.82762 0.5 7C0.5 7.17238 0.570235 7.3377 0.695255 7.45959C0.820274 7.58149 0.989837 7.64996 1.16664 7.64996H12.2237L7.36141 12.3898C7.29947 12.4502 7.25034 12.5219 7.21682 12.6008C7.1833 12.6797 7.16605 12.7643 7.16605 12.8497C7.16605 12.9351 7.1833 13.0196 7.21682 13.0985C7.25034 13.1774 7.29947 13.2491 7.36141 13.3095C7.42335 13.3699 7.49688 13.4178 7.5778 13.4505C7.65873 13.4832 7.74547 13.5 7.83306 13.5C7.92065 13.5 8.00739 13.4832 8.08831 13.4505C8.16924 13.4178 8.24277 13.3699 8.30471 13.3095L14.3045 7.45985C14.3665 7.39949 14.4156 7.3278 14.4492 7.2489C14.4827 7.16999 14.5 7.08541 14.5 7C14.5 6.91458 14.4827 6.83001 14.4492 6.7511Z" fill=""/>
-              </svg></li>
-          </ul>
-      </div>
-  </div>
 
   <div class="sections__container">
 
-
-
-
-      <!-- <div class="header__menu-container-sticky">
-        <ul class="header__menu-container-list">
-            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/about.html">О нас</a></li>
-            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/projects.html">Проекты</a></li>
-            <li class="header__menu-container-list-item text__h3 text__color-white text__font-family-montserrat text-effect"><a href="./pages/contacts.html">Контакты</a></li>
-            <li class="header__menu-container-list-item text__h3 text__color-black text__font-family-montserrat button__menu contactBtn">Заказать проект
-                <svg class="button__menu-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="">
-                <path d="M14.4492 6.7511C14.4156 6.6722 14.3665 6.60051 14.3045 6.54015L8.30471 0.690476C8.17962 0.568516 8.00996 0.5 7.83306 0.5C7.65616 0.5 7.4865 0.568516 7.36141 0.690476C7.23632 0.812435 7.16605 0.977848 7.16605 1.15033C7.16605 1.3228 7.23632 1.48821 7.36141 1.61017L12.2237 6.35004H1.16664C0.989837 6.35004 0.820274 6.41851 0.695255 6.54041C0.570235 6.6623 0.5 6.82762 0.5 7C0.5 7.17238 0.570235 7.3377 0.695255 7.45959C0.820274 7.58149 0.989837 7.64996 1.16664 7.64996H12.2237L7.36141 12.3898C7.29947 12.4502 7.25034 12.5219 7.21682 12.6008C7.1833 12.6797 7.16605 12.7643 7.16605 12.8497C7.16605 12.9351 7.1833 13.0196 7.21682 13.0985C7.25034 13.1774 7.29947 13.2491 7.36141 13.3095C7.42335 13.3699 7.49688 13.4178 7.5778 13.4505C7.65873 13.4832 7.74547 13.5 7.83306 13.5C7.92065 13.5 8.00739 13.4832 8.08831 13.4505C8.16924 13.4178 8.24277 13.3699 8.30471 13.3095L14.3045 7.45985C14.3665 7.39949 14.4156 7.3278 14.4492 7.2489C14.4827 7.16999 14.5 7.08541 14.5 7C14.5 6.91458 14.4827 6.83001 14.4492 6.7511Z" fill=""/>
-                </svg></li>
-        </ul>
-    </div> -->
-
-
-
-
         <div class="sections__gap">
+
                 <section class="cd-section visible">
                     <div class="cd-section-container cd-section-container1">
                         <div class="cd-section-container-name">
                             <h5 class="text__h5 text__color-white text__font-family-unbounded">Integral Analytics</h5>
                         </div>
-                        <div class="cd-section-container-about">
-                          <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design UX/UI</p>
-                          <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Sviluppo</p>
-                        </div>
+                    <div class="cd-section-container-about">
+                    <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design UX/UI</p>
+                    <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Sviluppo</p>
+                    </div>
                     </div>
                 </section>
 
                 <section class="cd-section">
-
                     <div class="cd-section-container">
-
                         <div class="cd-section-container-name">
                             <h5 class="text__h5 text__color-white text__font-family-unbounded">Integral Analytics</h5>
                         </div>
-
                         <div class="cd-section-container-about">
                             <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Identità visiva</p>
                             <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design</p>
                         </div>
-
                     </div>
-
                 </section>
-
+                
                 <section class="cd-section">
-
                     <div class="cd-section-container">
-
                         <div class="cd-section-container-name">
                             <h5 class="text__h5 text__color-white text__font-family-unbounded">Ozon</h5>
                         </div>
-
                         <div class="cd-section-container-about">
                             <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design UX/UI</p>
                             <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Sviluppo</p>
                         </div>
-
                     </div>
-
                 </section>
-
+                
                 <section class="cd-section">
-
                   <div class="cd-section-container">
-
                       <div class="cd-section-container-name">
                           <h5 class="text__h5 text__color-black text__font-family-unbounded">Gorizont-VS</h5>
                       </div>
-
                       <div class="cd-section-container-about">
                           <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design UX/UI</p>
                           <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Sviluppo</p>
                       </div>
-
                   </div>
-
                 </section>
 
                 <section class="cd-section">
-
                   <div class="cd-section-container">
-
                       <div class="cd-section-container-name">
                           <h5 class="text__h5 text__color-black text__font-family-unbounded">Beregi</h5>
                       </div>
-
                       <div class="cd-section-container-about">
                           <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Design UX/UI</p>
                           <p class="cd-section-container-about-item text__p-about text__color-white text__font-family-montserrat button__about">Sviluppo</p>
                       </div>
-
                   </div>
-
                 </section>
-
-        <!-- <a class="sections__projects text__effect-underline-projects text__color-white text__decoration-underline text-effect" href="./pages/projects.html"><h3 class="text__p text__color-white text__font-family-montserrat text-effect">Смотреть больше</h3>
-          <svg class="svg__arrow-projects" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="">
-                <g clip-path="url(#clip0_885_5327)">
-                <path d="M15.147 14.5109C15.1916 14.4004 15.2137 14.2817 15.2121 14.1614L15.0647 2.51832C15.0616 2.27557 14.9622 2.04155 14.7884 1.86772C14.6146 1.6939 14.3805 1.59452 14.1378 1.59145C13.895 1.58837 13.6635 1.68185 13.494 1.85133C13.3245 2.0208 13.231 2.25238 13.2341 2.49513L13.3544 11.9301L2.48987 1.06556C2.31614 0.891833 2.08225 0.792509 1.83964 0.789435C1.59702 0.786362 1.36557 0.879791 1.19619 1.04917C1.02681 1.21855 0.933381 1.45 0.936454 1.69262C0.939527 1.93523 1.03885 2.16912 1.21258 2.34285L12.0771 13.2074L2.64215 13.0871C2.52195 13.0856 2.40323 13.1077 2.29277 13.1523C2.18231 13.1969 2.08226 13.263 1.99835 13.347C1.91443 13.4309 1.84829 13.5309 1.8037 13.6414C1.75911 13.7518 1.73694 13.8706 1.73847 13.9908C1.73999 14.111 1.76517 14.2303 1.81257 14.3419C1.85998 14.4535 1.92867 14.5553 2.01474 14.6414C2.10081 14.7274 2.20256 14.7961 2.31419 14.8435C2.42582 14.8909 2.54514 14.9161 2.66534 14.9176L14.3085 15.0651C14.4287 15.0667 14.5474 15.0446 14.6579 15C14.7684 14.9555 14.8685 14.8893 14.9524 14.8054C15.0363 14.7215 15.1025 14.6214 15.147 14.5109Z" fill=""/>
-                </g>
-                <defs>
-                <clipPath id="clip0_885_5327">
-                <rect width="15" height="15" fill="" transform="translate(0.464844 0.763672)"/>
-                </clipPath>
-                </defs>
-            </svg></a> -->
-
-            <!-- <div class="sections__gap"> -->
 
               <div class="padding-side">
                     <a class="sections__projects text__effect-projects" href="./pages/projects.html"><h3 class="text__p text__font-family-montserrat">Altri progetti</h3>
@@ -452,14 +387,6 @@ if (empty($_SESSION['csrf_token']))
 
                         <div class="about__section-subtitle">
                             <h2 class="text__h1-about text__color-white text__font-family-montserrat">Collaborando con noi, otterrai un coinvolgimento totale nel progetto e il controllo completo su ogni fase di lavoro.
-                            <!-- <div class="arrow-container">
-                                <a href="./pages/about.html">
-                                    <div class="arrow-icon">
-                                        <span class="arrow-tail"></span>
-                                        <span class="arrow"></span>
-                                    </div>
-                                </a>
-                            </div> -->
                             </h2>
                         </div>
                     </div>
