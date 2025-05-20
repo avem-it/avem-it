@@ -41,7 +41,8 @@ table {
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input, textarea {
-    -webkit-user-select: auto;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
@@ -83,8 +84,10 @@ meter {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
     overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    -webkit-user-select: auto;
+    -webkit-line-break: strict;
+    line-break: strict;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
@@ -127,7 +130,9 @@ meter {
 .logo-big {
     width: auto;
     height: auto;
-    max-height: clamp(80px, 10vw, 120px);
+    max-height: 120px;
+    min-height: 80px;
+    height: 10vw;
 }
 
 /* ============================== */
@@ -135,8 +140,11 @@ meter {
 /* ============================== */
 
   /* Transition durations */
+
+:root {
   --t-default: 0.3s ease;
   --t-fast:    0.2s ease;
+}
 
 .footer {
     padding: 80px 0;
@@ -218,9 +226,7 @@ meter {
 
 html {scroll-behavior: smooth; }
 
-body {}
-  
-  .page-index {
+.page-index {
     /* max-width: 1920px; */
     width: 100%;
     margin: 0 auto;
@@ -321,9 +327,9 @@ body {}
     justify-content: center;
     align-items: center;
     gap: 10px;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     border-radius: 100px;
     background: #EBFD36;
     backdrop-filter: blur(7.5px);
@@ -362,9 +368,9 @@ body {}
     stroke: white;
     fill: none;
     animation: moveUpDown 2.8s ease-in-out infinite;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   .svg__arrow-down-img:hover {
@@ -389,9 +395,9 @@ body {}
     stroke: black;
     fill: none;
     animation: moveUpDown 2.8s ease-in-out infinite;
-    -webkit-transition: 0.2s ease;
-    -moz-transition: 0.2s ease;
-    -o-transition: 0.2s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   
   .svg__arrow-down-black-img:hover {
@@ -656,6 +662,9 @@ body {}
   }
   
   input[type="checkbox"]:checked + .tab-title {
+    display: block; /* Показывает заголовок вкладки */
+    background-color: #e0e0e0; /* Пример изменения фона */
+    font-weight: bold; /* Пример стилизации текста */
   }
   
   input[type="checkbox"]:checked + .tab-title::after {
@@ -684,9 +693,6 @@ body {}
   
   .sections__steps-mini {
     display: none;
-  }
-  
-  .sections__steps {
   }
   
   .sections__steps-up {
@@ -810,8 +816,8 @@ body {}
   }
   
   .sections__page-projects img {
-    width: 100%; /* Картинка занимает всю ширину родителя */
-    max-height: auto; /* Сохраняет пропорции */
+    max-width: 100%; /* Ограничивает ширину, сохраняя пропорции */
+    height: auto; /* Высота подстраивается автоматически */
     border-radius: 20px; /* Скругленные углы */
     object-fit: cover; /* Подгон изображения */
   }
@@ -865,9 +871,9 @@ body {}
     width: 40px;
     height: 40px;
     stroke: black;
-    -webkit-transition: 0.3s ease; /* Safari and Chrome */
-    -moz-transition: 0.3s ease; /* Firefox 4 */
-    -o-transition: 0.3s ease; /* Opera */
+    -webkit-transition: all 0.3s ease; /* Safari and Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox 4 */
+    transition: all 0.3s ease; /* Opera */
   }
   
   .modal-content-exit-close:hover {
@@ -891,9 +897,6 @@ body {}
     display: flex;
     margin-top: 104px;
     justify-content: center;
-  }
-  
-  .modal-content-container-form-section-custom {
   }
   
   .modal-content-container-form-section-custon-line {
@@ -995,9 +998,9 @@ body {}
     background: #DEF347;
     border-radius: 100px;
     justify-content: center;
-    -webkit-transition: 0.3s ease; /* Safari and Chrome */
-    -moz-transition: 0.3s ease; /* Firefox 4 */
-    -o-transition: 0.3s ease; /* Opera */
+    -webkit-transition: all 0.3s ease; /* Safari and Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox 4 */
+    transition: all 0.3s ease; /* Opera */
   }
   
   .button__consult:hover {
@@ -1045,9 +1048,9 @@ body {}
   .modal-content-container-contacts-socials-icon {
     width: 50px;
     height: 50px;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
+    -webkit-transition: all 0.3s ease; /* Safari and Chrome */
+    -moz-transition: all 0.3s ease; /* Firefox 4 */
+    transition: all 0.3s ease; /* Opera */
   }
   
   .modal-content-container-contacts-socials-icon:hover {
@@ -1132,9 +1135,6 @@ body {}
   
   .modal-content-success h3 {
     margin-bottom: 25px;
-  }
-  
-  .modal-content-success p {
   }
   
   /* Ошибка валидации полей */
@@ -2061,3 +2061,4 @@ textarea::placeholder {
        right: 20px;
    }
  }
+}
